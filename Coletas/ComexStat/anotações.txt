@@ -1,0 +1,6 @@
+Dados por Municípios
+
+Os dados detalhados por municípios dizem respeito ao domicílio fiscal do declarante das exportações e importações, 
+que podem não coincidir com o produtor ou adquirente dos produtos comercializados. 
+Estão disponíveis dados mensais de exportação e importação, de 1997 ao ano atual. Os dados detalhados por municípios
+estão disponíveis apenas ao nível de SH4 (posição) e parceiros comerciais.

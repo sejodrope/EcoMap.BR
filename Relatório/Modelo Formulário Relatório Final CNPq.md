@@ -23,7 +23,6 @@ O formulário deve ser preenchido no formato digitado, fonte Arial 12, espaço 1
 O arquivo deve ser salvo com o nome do aluno, na extensão “pdf”.
 
 
-
 Resumo
 O resumo deve ser na própria língua do trabalho, com no máximo 200 palavras. Deve-se utilizar texto com fonte Arial, tamanho 10, redigido em parágrafo único, com espaçamento simples (1,0) entre linhas.
 
