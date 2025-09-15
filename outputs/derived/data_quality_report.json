@@ -1,0 +1,197 @@
+{
+  "caged": {
+    "source": "caged",
+    "total_rows": 50,
+    "total_columns": 2,
+    "memory_usage_mb": 0.000762939453125,
+    "column_info": {
+      "unnamed_column": {
+        "dtype": "String",
+        "null_count": 43,
+        "null_percentage": 86.0,
+        "unique_count": 5,
+        "unique_percentage": 10.0
+      },
+      "duplicated_0": {
+        "dtype": "String",
+        "null_count": 47,
+        "null_percentage": 94.0,
+        "unique_count": 4,
+        "unique_percentage": 8.0
+      }
+    },
+    "quality_score": 9.7
+  },
+  "pib": {
+    "source": "pib",
+    "total_rows": 6,
+    "total_columns": 20,
+    "memory_usage_mb": 0.00091552734375,
+    "column_info": {
+      "tabela_5938_produto_interno_bruto_a_precos_correntes_impostos_liquidos_de_subsidios_sobre_produtos_a_precos_correntes_e_valor_adicionado_bruto_a_precos_correntes_total_e_por_atividade_economica_e_respectivas_participacoes_referencia_2010": {
+        "dtype": "String",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 6,
+        "unique_percentage": 100.0
+      },
+      "unnamed_column": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_0": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_1": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_2": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_3": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_4": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_5": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_6": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_7": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_8": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_9": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_10": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_11": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_12": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_13": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_14": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_15": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_16": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      },
+      "duplicated_17": {
+        "dtype": "Int64",
+        "null_count": 4,
+        "null_percentage": 66.66666666666666,
+        "unique_count": 3,
+        "unique_percentage": 50.0
+      }
+    },
+    "quality_score": 40.66666666666667
+  },
+  "dataviva": {
+    "source": "dataviva",
+    "total_rows": 33454,
+    "total_columns": 2,
+    "memory_usage_mb": 0.510467529296875,
+    "column_info": {
+      "data_text_csv_charset_utf_8": {
+        "dtype": "String",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 296,
+        "unique_percentage": 0.884797034734262
+      },
+      "unnamed_column": {
+        "dtype": "String",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 296,
+        "unique_percentage": 0.884797034734262
+      }
+    },
+    "quality_score": 70.26543911042027
+  }
+}

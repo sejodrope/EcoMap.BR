@@ -1,0 +1,262 @@
+# EcoMap.BR - Configuração do Pipeline de Análise Econômica
+
+# =============================================================================
+# CONFIGURAÇÕES GERAIS
+# =============================================================================
+project_name: "EcoMap.BR - Análise Econômica de Joinville/SC"
+version: "1.0.0"
+author: "José Pedro - Univille/CNPq-CEEI"
+
+# =============================================================================
+# CAMINHOS E ESTRUTURA DE ARQUIVOS
+# =============================================================================
+paths:
+  base_path: "."
+  raw_data: "./Coletas"
+  outputs: "./outputs"
+  clean_data: "./outputs/clean"
+  derived_data: "./outputs/derived" 
+  figures: "./outputs/figures"
+  reports: "./outputs/report"
+  logs: "./logs"
+
+# Fontes de dados disponíveis
+data_sources:
+  rais:
+    path: "./Coletas/RAIS"
+    pattern: "*.csv"
+    encoding: "utf-8"
+    separator: ","
+  
+  caged:
+    path: "./Coletas/CAGED"
+    pattern: "*.csv"
+    encoding: "utf-8"
+    separator: ","
+  
+  pib:
+    path: "./Coletas/PIB"
+    pattern: "*.csv"
+    encoding: "utf-8"
+    separator: ","
+  
+  comexstat:
+    path: "./Coletas/ComexStat"
+    pattern: "*.csv"
+    encoding: "utf-8"
+    separator: ","
+  
+  dataviva:
+    path: "./Coletas/DataViva"
+    pattern: "*.csv"
+    encoding: "utf-8"
+    separator: ","
+  
+  # INPI indisponível no momento da coleta
+  inpi:
+    available: false
+    path: "./Coletas/INPI"
+    note: "Fonte temporariamente indisponível durante o período de coleta"
+
+# =============================================================================
+# FILTROS GEOGRÁFICOS E TEMPORAIS
+# =============================================================================
+
+# Configuração geográfica principal
+geographic:
+  target_municipality: "Joinville"
+  target_uf: "SC"
+  ibge_code: "4209102"
+
+# Configuração temporal principal
+temporal:
+  start_year: 2003
+  end_year: 2025
+  reference_years: [2010, 2015, 2020, 2023]
+
+geographic_filters:
+  # UF de interesse
+  uf_alvo: "SC"
+  uf_codigo: "42"
+  
+  # Municípios de interesse (códigos IBGE)
+  municipios_alvo:
+    - name: "Joinville"
+      codigo_ibge: "4209102"
+    - name: "Florianópolis" 
+      codigo_ibge: "4205407"
+    - name: "Blumenau"
+      codigo_ibge: "4202404"
+  
+  # Foco principal
+  municipio_principal: "Joinville"
+  codigo_principal: "4209102"
+
+temporal_filters:
+  # Período de análise
+  periodo_inicial: 2003
+  periodo_final: 2025
+  
+  # Granularidades temporais
+  granularidade_mensal: true
+  granularidade_anual: true
+  
+  # Anos de referência para comparações
+  anos_referencia:
+    - 2010  # Censo
+    - 2015  # Meio período
+    - 2020  # Pandemia
+    - 2023  # Dados mais recentes
+
+# =============================================================================
+# CLASSIFICAÇÕES SETORIAIS
+# =============================================================================
+sectoral_classification:
+  # Nível de agregação CNAE desejado
+  cnae_level: "divisao"  # opcoes: secao, divisao, grupo, classe, subclasse
+  
+  # Setores de interesse especial
+  setores_foco:
+    - "Indústria de transformação"
+    - "Comércio"
+    - "Serviços"
+    - "Construção"
+    - "Informação e comunicação"
+  
+  # Agrupamentos customizados
+  agrupamentos:
+    industria_tradicional:
+      - "10"  # Fabricação de produtos alimentícios
+      - "13"  # Fabricação de produtos têxteis
+      - "25"  # Fabricação de produtos de metal
+    
+    industria_tecnologica:
+      - "26"  # Fabricação de equipamentos de informática
+      - "27"  # Fabricação de máquinas e equipamentos elétricos
+      - "28"  # Fabricação de máquinas e equipamentos
+
+# =============================================================================
+# PARÂMETROS DE PERFORMANCE E PROCESSAMENTO
+# =============================================================================
+performance:
+  # Engine preferencial para dados grandes
+  preferred_engine: "polars"  # opcoes: pandas, polars
+  
+  # Configurações para arquivos grandes
+  chunk_size: 10000
+  use_dask: false
+  
+  # Limites de memória
+  max_memory_gb: 4
+  
+  # Paralelização
+  n_jobs: -1  # -1 para usar todos os cores disponíveis
+
+# =============================================================================
+# CONFIGURAÇÕES DE ANÁLISE
+# =============================================================================
+analysis:
+  # Indicadores a calcular
+  indicators:
+    employment_growth: true
+    wage_analysis: true
+    location_quotient: true
+    hhi_concentration: true
+    revealed_comparative_advantage: true
+    seasonality_decomposition: true
+    trend_analysis: true
+  
+  # Parâmetros para cálculos
+  parameters:
+    # Período para média móvel (meses)
+    moving_average_periods: [3, 6, 12]
+    
+    # Threshold para concentração (HHI)
+    hhi_thresholds:
+      baixa: 0.15
+      moderada: 0.25
+      alta: 0.50
+    
+    # Threshold para especialização (LQ)
+    lq_threshold: 1.0
+    
+    # Deflator para valores reais (ano base)
+    deflator_base_year: 2023
+
+# =============================================================================
+# CONFIGURAÇÕES DE VISUALIZAÇÃO
+# =============================================================================
+visualization:
+  # Temas e cores
+  theme: "seaborn-v0_8"
+  color_palette: "Set2"
+  
+  # Formatos de saída
+  formats: ["png", "html", "svg"]
+  
+  # Dimensões padrão
+  figure_size: [12, 8]
+  dpi: 300
+  
+  # Configurações específicas
+  plotly_template: "plotly_white"
+  matplotlib_style: "seaborn-v0_8-whitegrid"
+
+# =============================================================================
+# CONFIGURAÇÕES DE RELATÓRIO
+# =============================================================================
+report:
+  # Formato de saída
+  output_formats: ["markdown", "html"]  # adicionar "pdf" se pandoc disponível
+  
+  # Idioma
+  language: "pt-br"
+  
+  # Seções a incluir
+  sections:
+    executive_summary: true
+    methodology: true
+    data_quality: true
+    main_findings: true
+    sectoral_analysis: true
+    indicators: true
+    limitations: true
+    next_steps: true
+  
+  # Configurações de tabelas
+  max_rows_per_table: 20
+  round_decimals: 2
+
+# =============================================================================
+# VALIDAÇÃO E QUALIDADE DE DADOS
+# =============================================================================
+data_quality:
+  # Colunas obrigatórias por fonte
+  required_columns:
+    rais: ["ano", "uf", "municipio", "cnae", "vinculo_ativo", "remuneracao_media"]
+    caged: ["ano", "mes", "uf", "municipio", "saldo", "admissoes", "desligamentos"]
+    pib: ["ano", "codigo_municipio", "pib", "pib_per_capita"]
+    comexstat: ["ano", "uf", "municipio", "via", "hs_code", "valor_usd"]
+  
+  # Thresholds para alertas
+  thresholds:
+    missing_data_percent: 0.1  # 10% de dados faltantes
+    outlier_iqr_multiplier: 3.0
+    minimum_rows_per_source: 100
+  
+  # Validações a executar
+  validations:
+    check_required_columns: true
+    check_data_types: true
+    check_missing_values: true
+    check_outliers: true
+    check_temporal_consistency: true
+
+# =============================================================================
+# LOGGING
+# =============================================================================
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "./logs/ecomap_pipeline.log"
+  console: true

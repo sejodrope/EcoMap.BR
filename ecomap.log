@@ -1,0 +1,1175 @@
+2025-09-14 20:35:29,257 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:35:29,258 - __main__ - INFO - Diretório criado: ./logs
+2025-09-14 20:35:29,258 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:35:29,258 - __main__ - ERROR - Erro inesperado: expected str, bytes or os.PathLike object, not dict
+2025-09-14 20:36:43,685 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:36:43,685 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:36:43,686 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 20:36:43,686 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 20:36:43,686 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 20:36:43,687 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 20:36:43,698 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:36:43,698 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:36:43,699 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,699 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:36:43,699 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,699 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:36:43,699 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:36:43,714 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:36:43,719 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,719 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,721 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,722 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,728 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,744 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 20:36:43,744 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:36:43,745 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:36:43,745 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,745 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:36:43,745 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,745 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:36:43,746 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:36:43,748 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 20:36:43,748 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 20:36:43,748 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 20:36:43,749 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['remuneracao_media', 'municipio', 'ano', 'uf', 'cnae', 'vinculo_ativo']
+2025-09-14 20:36:43,749 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:36:43,749 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 20:36:43,749 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 20:36:43,749 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 20:36:43,760 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:36:43,761 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 20:36:43,770 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:36:43,771 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 20:36:43,778 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:36:43,779 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 20:36:43,780 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 20:36:43,780 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 20:36:43,781 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 20:36:43,781 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['ano', 'municipio', 'mes', 'saldo', 'desligamentos', 'uf', 'admissoes']
+2025-09-14 20:36:43,781 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:36:43,781 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 20:36:43,781 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 20:36:43,781 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 20:36:43,781 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 20:36:43,781 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 20:36:43,790 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,791 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 20:36:43,792 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 20:36:43,792 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 20:36:43,793 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 20:36:43,793 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['pib_per_capita', 'codigo_municipio', 'ano', 'pib']
+2025-09-14 20:36:43,793 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:36:43,794 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 20:36:43,794 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 20:36:43,795 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 20:36:43,795 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 20:36:43,795 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 20:36:43,795 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 20:36:43,796 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 20:36:43,796 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 20:36:43,796 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 20:36:43,797 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 20:36:43,797 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 20:36:43,797 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 20:36:43,797 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 20:36:43,798 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 20:36:43,798 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 20:36:43,798 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 20:36:43,798 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 20:36:43,799 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 20:36:43,799 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 20:36:43,799 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 20:36:43,799 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 20:36:43,799 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 20:36:43,816 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,829 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 20:36:43,844 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,856 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 20:36:43,870 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:36:43,878 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 20:36:43,882 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 20:36:43,885 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 20:36:43,886 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:36:43,889 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,890 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,894 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,894 - src.utils.io_utils - ERROR - Erro ao carregar Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,895 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:36:43,898 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,898 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,899 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,899 - src.utils.io_utils - ERROR - Erro ao carregar Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,900 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:36:43,903 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,903 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,905 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,906 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,906 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:36:43,909 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,909 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,910 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,910 - src.utils.io_utils - ERROR - Erro ao carregar Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,911 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:36:43,914 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,914 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:36:43,916 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,917 - src.utils.io_utils - ERROR - Erro ao carregar Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:36:43,917 - src.ingestion - WARNING - Nenhum arquivo encontrado para fonte dataviva
+2025-09-14 20:36:43,917 - src.ingestion - WARNING - Fonte dataviva retornou dados vazios
+2025-09-14 20:36:43,917 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 20:36:43,925 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 20:36:43,925 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 20:36:43,927 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 20:36:43,927 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 20:36:43,929 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 20:36:43,929 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 20:36:43,951 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 20:36:43,963 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 20:36:43,964 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 20:36:43,964 - __main__ - ERROR - Erro inesperado: 'outputs'
+2025-09-14 20:38:00,787 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:38:00,788 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:38:00,788 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 20:38:00,789 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 20:38:00,789 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 20:38:00,789 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 20:38:00,793 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:38:00,794 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:38:00,794 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,795 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:38:00,795 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,796 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:38:00,796 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:38:00,797 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:00,801 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,801 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,808 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,809 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,817 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,839 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 20:38:00,840 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:38:00,840 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:38:00,841 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,842 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:38:00,843 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,844 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:38:00,844 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:38:00,850 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 20:38:00,850 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 20:38:00,851 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 20:38:00,852 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['remuneracao_media', 'municipio', 'cnae', 'ano', 'vinculo_ativo', 'uf']
+2025-09-14 20:38:00,852 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:38:00,853 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 20:38:00,853 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 20:38:00,854 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 20:38:00,857 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:38:00,859 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 20:38:00,861 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:38:00,862 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 20:38:00,863 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:38:00,864 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 20:38:00,866 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 20:38:00,866 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 20:38:00,866 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 20:38:00,867 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['admissoes', 'saldo', 'mes', 'municipio', 'desligamentos', 'ano', 'uf']
+2025-09-14 20:38:00,867 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:38:00,867 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 20:38:00,867 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 20:38:00,867 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 20:38:00,868 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 20:38:00,868 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 20:38:00,870 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,871 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 20:38:00,872 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 20:38:00,872 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 20:38:00,872 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 20:38:00,872 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['pib_per_capita', 'ano', 'codigo_municipio', 'pib']
+2025-09-14 20:38:00,873 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:38:00,873 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 20:38:00,873 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 20:38:00,873 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 20:38:00,873 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 20:38:00,874 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 20:38:00,874 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 20:38:00,874 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 20:38:00,874 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 20:38:00,874 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 20:38:00,874 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 20:38:00,875 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 20:38:00,875 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 20:38:00,875 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 20:38:00,875 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 20:38:00,875 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 20:38:00,875 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 20:38:00,876 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 20:38:00,876 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 20:38:00,876 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 20:38:00,876 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 20:38:00,876 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 20:38:00,876 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 20:38:00,883 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,896 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 20:38:00,902 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,913 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 20:38:00,928 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:00,941 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 20:38:00,948 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 20:38:00,954 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 20:38:00,956 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:00,961 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,963 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,968 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,969 - src.utils.io_utils - ERROR - Erro ao carregar Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,969 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:00,971 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,972 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,973 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,973 - src.utils.io_utils - ERROR - Erro ao carregar Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,974 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:00,979 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,979 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,983 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,984 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,985 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:00,987 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,987 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,988 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,989 - src.utils.io_utils - ERROR - Erro ao carregar Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,989 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:00,991 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,992 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:00,994 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,995 - src.utils.io_utils - ERROR - Erro ao carregar Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:00,995 - src.ingestion - WARNING - Nenhum arquivo encontrado para fonte dataviva
+2025-09-14 20:38:00,995 - src.ingestion - WARNING - Fonte dataviva retornou dados vazios
+2025-09-14 20:38:00,995 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 20:38:00,999 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 20:38:01,000 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 20:38:01,001 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 20:38:01,001 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 20:38:01,002 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 20:38:01,003 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 20:38:01,006 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 20:38:01,017 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 20:38:01,018 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 20:38:01,020 - __main__ - ERROR - Erro inesperado: 'DataFrame' object has no attribute 'to_parquet'
+2025-09-14 20:38:55,919 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:38:55,919 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:38:55,920 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 20:38:55,920 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 20:38:55,921 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 20:38:55,921 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 20:38:55,925 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:38:55,925 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:38:55,925 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:55,926 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:38:55,926 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:55,927 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:38:55,928 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:38:55,929 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:55,934 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:55,934 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:55,938 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:55,938 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:55,946 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:55,971 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 20:38:55,971 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:38:55,971 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:38:55,972 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:55,972 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:38:55,972 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:55,973 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:38:55,973 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:38:55,974 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 20:38:55,975 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 20:38:55,975 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 20:38:55,975 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['remuneracao_media', 'ano', 'uf', 'vinculo_ativo', 'municipio', 'cnae']
+2025-09-14 20:38:55,975 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:38:55,976 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 20:38:55,976 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 20:38:55,976 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 20:38:55,979 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:38:55,980 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 20:38:55,982 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:38:55,982 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 20:38:55,984 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:38:55,984 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 20:38:55,985 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 20:38:55,985 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 20:38:55,985 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 20:38:55,986 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['admissoes', 'saldo', 'desligamentos', 'ano', 'uf', 'municipio', 'mes']
+2025-09-14 20:38:55,986 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:38:55,986 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 20:38:55,986 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 20:38:55,986 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 20:38:55,986 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 20:38:55,986 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 20:38:55,988 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:55,989 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 20:38:55,991 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 20:38:55,991 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 20:38:55,992 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 20:38:55,992 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['codigo_municipio', 'pib_per_capita', 'pib', 'ano']
+2025-09-14 20:38:55,993 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:38:55,993 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 20:38:55,993 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 20:38:55,994 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 20:38:55,994 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 20:38:55,994 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 20:38:55,995 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 20:38:55,995 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 20:38:55,995 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 20:38:55,995 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 20:38:55,996 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 20:38:55,997 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 20:38:55,997 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 20:38:55,997 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 20:38:55,998 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 20:38:55,998 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 20:38:55,998 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 20:38:56,007 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:56,019 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 20:38:56,024 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:56,037 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 20:38:56,043 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:38:56,051 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 20:38:56,055 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 20:38:56,059 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 20:38:56,060 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:56,063 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,063 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:56,067 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,067 - src.utils.io_utils - ERROR - Erro ao carregar Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,068 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:56,070 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,070 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:56,071 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,071 - src.utils.io_utils - ERROR - Erro ao carregar Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,071 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:56,073 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,074 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:56,076 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,076 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,077 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:56,078 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,079 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:56,079 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,080 - src.utils.io_utils - ERROR - Erro ao carregar Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,080 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:38:56,082 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,083 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:38:56,085 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,085 - src.utils.io_utils - ERROR - Erro ao carregar Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:38:56,085 - src.ingestion - WARNING - Nenhum arquivo encontrado para fonte dataviva
+2025-09-14 20:38:56,085 - src.ingestion - WARNING - Fonte dataviva retornou dados vazios
+2025-09-14 20:38:56,085 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 20:38:56,089 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 20:38:56,090 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 20:38:56,091 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 20:38:56,091 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 20:38:56,093 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 20:38:56,093 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 20:38:56,097 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 20:38:56,105 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 20:38:56,105 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 20:38:56,106 - __main__ - INFO - Tipo de DataFrame para rais: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:38:56,127 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:38:56,131 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:38:56,136 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 20:40:40,562 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:40:40,563 - __main__ - INFO - === EXECUTANDO PIPELINE COMPLETO ===
+2025-09-14 20:40:40,563 - __main__ - INFO - Etapa 1/4: Ingestão de dados
+2025-09-14 20:40:40,563 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:40:40,564 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 20:40:40,564 - __main__ - ERROR - Erro na execução do pipeline: 'Namespace' object has no attribute 'sources'
+2025-09-14 20:40:42,739 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:40:42,739 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:40:42,740 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 20:40:42,740 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 20:40:42,740 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 20:40:42,741 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 20:40:42,744 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:40:42,744 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:40:42,744 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,745 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:40:42,745 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,745 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:40:42,745 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:40:42,746 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:40:42,750 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,750 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,753 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,753 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,758 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,774 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 20:40:42,775 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:40:42,775 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:40:42,776 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,776 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:40:42,777 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,778 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:40:42,778 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:40:42,781 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 20:40:42,781 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 20:40:42,782 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 20:40:42,782 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['cnae', 'uf', 'vinculo_ativo', 'remuneracao_media', 'municipio', 'ano']
+2025-09-14 20:40:42,783 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:40:42,783 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 20:40:42,784 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 20:40:42,784 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 20:40:42,785 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:40:42,786 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 20:40:42,787 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:40:42,789 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 20:40:42,790 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:40:42,792 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 20:40:42,794 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 20:40:42,794 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 20:40:42,795 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 20:40:42,795 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['uf', 'mes', 'saldo', 'desligamentos', 'admissoes', 'municipio', 'ano']
+2025-09-14 20:40:42,795 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:40:42,795 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 20:40:42,796 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 20:40:42,796 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 20:40:42,796 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 20:40:42,796 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 20:40:42,799 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,800 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 20:40:42,801 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 20:40:42,802 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 20:40:42,802 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 20:40:42,802 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['pib', 'pib_per_capita', 'ano', 'codigo_municipio']
+2025-09-14 20:40:42,803 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:40:42,803 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 20:40:42,803 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 20:40:42,803 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 20:40:42,803 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 20:40:42,803 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 20:40:42,804 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 20:40:42,805 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 20:40:42,805 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 20:40:42,805 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 20:40:42,805 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 20:40:42,805 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 20:40:42,805 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 20:40:42,805 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 20:40:42,811 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,822 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 20:40:42,827 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,838 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 20:40:42,843 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:40:42,851 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 20:40:42,855 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 20:40:42,859 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 20:40:42,861 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:40:42,865 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,865 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,869 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,869 - src.utils.io_utils - ERROR - Erro ao carregar Atividades_Economicas_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,870 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:40:42,872 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,873 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,874 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,874 - src.utils.io_utils - ERROR - Erro ao carregar Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,874 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:40:42,877 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,877 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,881 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,882 - src.utils.io_utils - ERROR - Erro ao carregar Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,883 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:40:42,885 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,885 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,886 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,886 - src.utils.io_utils - ERROR - Erro ao carregar Espaco_de_Atividades_para_Joinville_2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,887 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:40:42,890 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,890 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:40:42,892 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\DataViva\Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,892 - src.utils.io_utils - ERROR - Erro ao carregar Ocupacoes_em_Joinville_2003-2023.csv: found more fields than defined in 'Schema'
+
+Consider setting 'truncate_ragged_lines=True'.
+2025-09-14 20:40:42,892 - src.ingestion - WARNING - Nenhum arquivo encontrado para fonte dataviva
+2025-09-14 20:40:42,892 - src.ingestion - WARNING - Fonte dataviva retornou dados vazios
+2025-09-14 20:40:42,893 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 20:40:42,899 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 20:40:42,900 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 20:40:42,902 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 20:40:42,903 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 20:40:42,905 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 20:40:42,906 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 20:40:42,912 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 20:40:42,924 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 20:40:42,924 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 20:40:42,925 - __main__ - INFO - Tipo de DataFrame para rais: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:40:42,948 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:40:42,955 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:40:42,959 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 20:40:44,920 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:40:44,921 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 20:40:45,027 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 20:40:45,028 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 20:40:45,106 - src.indicators - ERROR - Erro no cálculo do Location Quotient: 'municipio'
+2025-09-14 20:40:45,108 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 20:40:45,122 - src.indicators - ERROR - Erro no cálculo do HHI: 'municipio'
+2025-09-14 20:40:45,123 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 20:40:45,124 - src.indicators - INFO - Tabela mestre iniciada com caged: 50 linhas
+2025-09-14 20:40:45,126 - src.indicators - ERROR - Erro na criação da tabela mestre: 'ano'
+2025-09-14 20:40:45,126 - src.indicators - INFO - Cálculo de indicadores concluído. 0 resultados gerados.
+2025-09-14 20:40:45,127 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 20:40:47,127 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:40:47,128 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 20:40:47,128 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 20:40:47,129 - src.visualization - INFO - Visualizador inicializado. Output: outputs\visualizations
+2025-09-14 20:40:47,129 - __main__ - ERROR - Erro inesperado: 'geographic'
+2025-09-14 20:40:49,114 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:40:49,114 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 20:40:49,115 - __main__ - ERROR - Erro inesperado: 'geographic'
+2025-09-14 20:50:49,482 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 20:50:49,483 - __main__ - INFO - === EXECUTANDO PIPELINE COMPLETO ===
+2025-09-14 20:50:49,483 - __main__ - INFO - Etapa 1/4: Ingestão de dados
+2025-09-14 20:50:49,483 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 20:50:49,484 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 20:50:49,484 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 20:50:49,485 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 20:50:49,485 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 20:50:49,489 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:50:49,489 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:50:49,490 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,490 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:50:49,490 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:50:49,491 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:50:49,492 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 20:50:49,494 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:50:49,506 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 20:50:49,514 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,534 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 20:50:49,535 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 20:50:49,536 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 20:50:49,537 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,538 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:50:49,539 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 20:50:49,540 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:50:49,540 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 20:50:49,544 - src.ingestion - ERROR - Erro ao processar fonte rais: unable to append to a DataFrame of width 2 with a DataFrame of width 28
+2025-09-14 20:50:49,545 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 20:50:49,551 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:50:49,552 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 20:50:49,554 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:50:49,555 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 20:50:49,556 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 20:50:49,558 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 20:50:49,560 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 20:50:49,560 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 20:50:49,561 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 20:50:49,561 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['ano', 'saldo', 'desligamentos', 'admissoes', 'mes', 'municipio', 'uf']
+2025-09-14 20:50:49,561 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:50:49,562 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 20:50:49,562 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 20:50:49,562 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 20:50:49,562 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 20:50:49,562 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 20:50:49,564 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,565 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 20:50:49,566 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 20:50:49,567 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 20:50:49,567 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 20:50:49,567 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['ano', 'pib', 'pib_per_capita', 'codigo_municipio']
+2025-09-14 20:50:49,568 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 20:50:49,568 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 20:50:49,568 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 20:50:49,568 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 20:50:49,568 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 20:50:49,569 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 20:50:49,569 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 20:50:49,569 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 20:50:49,569 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 20:50:49,569 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 20:50:49,570 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 20:50:49,571 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 20:50:49,571 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 20:50:49,571 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 20:50:49,571 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 20:50:49,572 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 20:50:49,579 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,592 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 20:50:49,598 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,611 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 20:50:49,617 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 20:50:49,625 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 20:50:49,629 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 20:50:49,635 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 20:50:49,637 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:50:49,641 - src.utils.io_utils - INFO - Carregado: Atividades_Economicas_em_Joinville_2003-2023.csv (13606 linhas)
+2025-09-14 20:50:49,642 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:50:49,645 - src.utils.io_utils - INFO - Carregado: Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv (2644 linhas)
+2025-09-14 20:50:49,646 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:50:49,649 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 20:50:49,650 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:50:49,652 - src.utils.io_utils - INFO - Carregado: Espaco_de_Atividades_para_Joinville_2023.csv (670 linhas)
+2025-09-14 20:50:49,652 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 20:50:49,655 - src.utils.io_utils - INFO - Carregado: Ocupacoes_em_Joinville_2003-2023.csv (10358 linhas)
+2025-09-14 20:50:49,656 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 20:50:49,656 - src.ingestion - INFO - Aplicando limpeza específica para dados DataViva...
+2025-09-14 20:50:49,656 - src.ingestion - INFO - Fonte dataviva: 33454 -> 33454 linhas após filtros (100.0% mantidas)
+2025-09-14 20:50:49,656 - src.utils.validation - INFO - dataviva: Percentual de valores ausentes dentro do aceitável
+2025-09-14 20:50:49,656 - src.ingestion - INFO - Fonte dataviva carregada com sucesso: 33454 linhas
+2025-09-14 20:50:49,656 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 20:50:49,658 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 20:50:49,658 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 20:50:49,659 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 20:50:49,659 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 20:50:49,665 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\dataviva_clean.csv (33454 linhas, formato: csv)
+2025-09-14 20:50:49,666 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\dataviva_clean.csv
+2025-09-14 20:50:49,670 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 20:50:49,673 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 20:50:49,673 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 20:50:49,674 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:50:49,675 - __main__ - INFO - [OK] caged: 50 registros salvos (Polars)
+2025-09-14 20:50:49,675 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:50:49,677 - __main__ - INFO - [OK] pib: 6 registros salvos (Polars)
+2025-09-14 20:50:49,677 - __main__ - INFO - Tipo de DataFrame para dataviva: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 20:50:49,685 - __main__ - INFO - [OK] dataviva: 33454 registros salvos (Polars)
+2025-09-14 20:50:49,685 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 20:50:49,686 - __main__ - INFO - Etapa 2/4: Cálculo de indicadores
+2025-09-14 20:50:49,686 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 20:50:49,693 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 20:50:49,715 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 20:50:49,742 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 20:50:49,750 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 20:50:49,750 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 20:50:49,750 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 20:50:49,781 - src.indicators - ERROR - Erro no cálculo do Location Quotient: 'municipio'
+2025-09-14 20:50:49,783 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 20:50:49,798 - src.indicators - ERROR - Erro no cálculo do HHI: 'municipio'
+2025-09-14 20:50:49,800 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 20:50:49,801 - src.indicators - INFO - Tabela mestre iniciada com caged: 50 linhas
+2025-09-14 20:50:49,805 - src.indicators - ERROR - Erro na criação da tabela mestre: 'ano'
+2025-09-14 20:50:49,806 - src.indicators - INFO - Cálculo de indicadores concluído. 0 resultados gerados.
+2025-09-14 20:50:49,806 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 20:50:49,806 - __main__ - INFO - Etapa 3/4: Criação de visualizações
+2025-09-14 20:50:49,806 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 20:50:49,807 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 20:50:49,807 - src.visualization - INFO - Visualizador inicializado. Output: outputs\visualizations
+2025-09-14 20:50:49,807 - src.visualization - INFO - Criando dashboard de indicadores para Joinville
+2025-09-14 20:50:56,300 - src.visualization - INFO - Dashboard salvo: dashboard_joinville.html
+2025-09-14 20:50:56,306 - src.visualization - INFO - Criação de visualizações concluída. 1 figuras geradas.
+2025-09-14 20:50:56,306 - __main__ - INFO - [OK] 1 visualizações criadas
+2025-09-14 20:50:56,306 - __main__ - INFO - === VISUALIZAÇÕES CONCLUÍDAS ===
+2025-09-14 20:50:56,306 - __main__ - INFO - Etapa 4/4: Geração de relatório
+2025-09-14 20:50:56,306 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 20:50:56,306 - __main__ - ERROR - Erro na execução do pipeline: 'temporal'
+2025-09-14 21:03:36,607 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:03:36,608 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 21:03:36,609 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 21:03:36,610 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 21:03:36,610 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 21:03:36,611 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 21:03:36,620 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,620 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 21:03:36,620 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:03:36,622 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 21:03:36,623 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 21:03:36,625 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:03:36,634 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:03:36,659 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,687 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 21:03:36,688 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,689 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 21:03:36,689 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:03:36,690 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 21:03:36,690 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 21:03:36,691 - src.ingestion - ERROR - Erro ao processar fonte rais: unable to append to a DataFrame of width 2 with a DataFrame of width 28
+2025-09-14 21:03:36,692 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 21:03:36,695 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:03:36,696 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 21:03:36,697 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:03:36,698 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 21:03:36,698 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:03:36,699 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 21:03:36,699 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:03:36,700 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 21:03:36,700 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 21:03:36,700 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['ano', 'admissoes', 'saldo', 'mes', 'desligamentos', 'uf', 'municipio']
+2025-09-14 21:03:36,700 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:03:36,700 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 21:03:36,700 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 21:03:36,700 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 21:03:36,701 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 21:03:36,701 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 21:03:36,705 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,706 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 21:03:36,709 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 21:03:36,709 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 21:03:36,709 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 21:03:36,710 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['ano', 'pib', 'pib_per_capita', 'codigo_municipio']
+2025-09-14 21:03:36,710 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:03:36,711 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 21:03:36,711 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 21:03:36,711 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 21:03:36,711 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 21:03:36,712 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 21:03:36,712 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 21:03:36,712 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 21:03:36,713 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 21:03:36,713 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 21:03:36,713 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 21:03:36,714 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 21:03:36,714 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 21:03:36,714 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 21:03:36,715 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 21:03:36,715 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 21:03:36,715 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 21:03:36,715 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 21:03:36,716 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 21:03:36,716 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 21:03:36,716 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 21:03:36,716 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 21:03:36,717 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 21:03:36,730 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,748 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 21:03:36,754 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,769 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 21:03:36,776 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:03:36,786 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 21:03:36,792 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 21:03:36,796 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 21:03:36,798 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:03:36,801 - src.utils.io_utils - INFO - Carregado: Atividades_Economicas_em_Joinville_2003-2023.csv (13606 linhas)
+2025-09-14 21:03:36,802 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:03:36,805 - src.utils.io_utils - INFO - Carregado: Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv (2644 linhas)
+2025-09-14 21:03:36,806 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:03:36,810 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:03:36,811 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:03:36,813 - src.utils.io_utils - INFO - Carregado: Espaco_de_Atividades_para_Joinville_2023.csv (670 linhas)
+2025-09-14 21:03:36,814 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:03:36,816 - src.utils.io_utils - INFO - Carregado: Ocupacoes_em_Joinville_2003-2023.csv (10358 linhas)
+2025-09-14 21:03:36,817 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:03:36,817 - src.ingestion - INFO - Aplicando limpeza específica para dados DataViva...
+2025-09-14 21:03:36,818 - src.ingestion - INFO - Fonte dataviva: 33454 -> 33454 linhas após filtros (100.0% mantidas)
+2025-09-14 21:03:36,818 - src.utils.validation - INFO - dataviva: Percentual de valores ausentes dentro do aceitável
+2025-09-14 21:03:36,818 - src.ingestion - INFO - Fonte dataviva carregada com sucesso: 33454 linhas
+2025-09-14 21:03:36,818 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 21:03:36,819 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 21:03:36,819 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 21:03:36,822 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 21:03:36,822 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 21:03:36,827 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\dataviva_clean.csv (33454 linhas, formato: csv)
+2025-09-14 21:03:36,827 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\dataviva_clean.csv
+2025-09-14 21:03:36,831 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 21:03:36,833 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 21:03:36,834 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 21:03:36,834 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:03:36,836 - __main__ - INFO - [OK] caged: 50 registros salvos (Polars)
+2025-09-14 21:03:36,836 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:03:36,839 - __main__ - INFO - [OK] pib: 6 registros salvos (Polars)
+2025-09-14 21:03:36,840 - __main__ - INFO - Tipo de DataFrame para dataviva: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:03:36,845 - __main__ - INFO - [OK] dataviva: 33454 registros salvos (Polars)
+2025-09-14 21:03:36,845 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 21:04:49,089 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:04:49,089 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 21:04:49,099 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 21:04:49,103 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 21:04:49,123 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 21:04:49,131 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 21:04:49,132 - __main__ - ERROR - Erro inesperado: calculate_all_indicators() takes 1 positional argument but 2 were given
+2025-09-14 21:05:33,498 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:05:33,499 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 21:05:33,508 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 21:05:33,510 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 21:05:33,514 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 21:05:33,519 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 21:05:33,519 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 21:05:33,519 - src.indicators - INFO - EconomicIndicators inicializado com engine: polars
+2025-09-14 21:05:33,519 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 21:05:33,519 - src.indicators - INFO - Calculando Location Quotient...
+2025-09-14 21:05:33,519 - src.indicators - WARNING - Colunas necessárias não encontradas para cálculo do LQ
+2025-09-14 21:05:33,519 - src.indicators - INFO - Calculando Vantagem Comparativa Revelada (RCA)...
+2025-09-14 21:05:33,519 - src.indicators - INFO - Calculando Revealed Comparative Advantage...
+2025-09-14 21:05:33,520 - src.indicators - WARNING - Dados de comércio exterior não disponíveis para RCA
+2025-09-14 21:05:33,520 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 21:05:33,520 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman...
+2025-09-14 21:05:33,520 - src.indicators - INFO - [OK] HHI de concentração calculado
+2025-09-14 21:05:33,520 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:05:33,521 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:05:33,521 - src.indicators - INFO - [OK] Crescimento de tabela_5938_produto_interno_bruto_a_precos_correntes_impostos_liquidos_de_subsidios_sobre_produtos_a_precos_correntes_e_valor_adicionado_bruto_a_precos_correntes_total_e_por_atividade_economica_e_respectivas_participacoes_referencia_2010 calculado para pib
+2025-09-14 21:05:33,522 - src.indicators - INFO - Calculando análise de sazonalidade...
+2025-09-14 21:05:33,522 - src.indicators - INFO - [OK] Análise de sazonalidade calculada
+2025-09-14 21:05:33,523 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:05:33,523 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:05:33,523 - src.indicators - INFO - Tabela mestre iniciada com dataviva: 33454 linhas
+2025-09-14 21:05:33,528 - src.indicators - INFO - [OK] Tabela mestre criada
+2025-09-14 21:05:33,528 - src.indicators - INFO - Cálculo de indicadores concluído. 4 resultados gerados.
+2025-09-14 21:05:33,531 - __main__ - INFO - [OK] concentration_index salvo
+2025-09-14 21:05:33,536 - __main__ - INFO - [OK] growth_indicators salvo
+2025-09-14 21:05:33,539 - __main__ - INFO - [OK] seasonality_analysis salvo
+2025-09-14 21:05:33,557 - __main__ - INFO - [OK] master_table salvo
+2025-09-14 21:05:33,558 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 21:05:39,651 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:05:39,652 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 21:05:39,674 - __main__ - INFO - [OK] concentration_index carregado
+2025-09-14 21:05:39,695 - __main__ - INFO - [OK] growth_indicators carregado
+2025-09-14 21:05:39,722 - __main__ - INFO - [OK] master_table carregado
+2025-09-14 21:05:39,739 - __main__ - INFO - [OK] seasonality_analysis carregado
+2025-09-14 21:05:39,740 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 21:05:39,741 - src.visualization - INFO - Visualizador inicializado. Output: outputs\figures
+2025-09-14 21:05:39,741 - src.visualization - INFO - Criando dashboard de indicadores para Joinville
+2025-09-14 21:05:39,948 - src.visualization - INFO - Dashboard salvo: dashboard_joinville.html
+2025-09-14 21:05:39,948 - src.visualization - INFO - [OK] Dashboard principal criado
+2025-09-14 21:05:39,949 - src.visualization - ERROR - Erro ao criar séries temporais: name 'np' is not defined
+2025-09-14 21:05:39,950 - src.visualization - ERROR - Erro na decomposição sazonal: name 'np' is not defined
+2025-09-14 21:05:39,987 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:05:39,988 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:05:39,988 - src.visualization - INFO - Criação de visualizações concluída. 2 figuras geradas.
+2025-09-14 21:05:39,989 - __main__ - INFO - [OK] 2 visualizações criadas
+2025-09-14 21:05:39,989 - __main__ - INFO - === VISUALIZAÇÕES CONCLUÍDAS ===
+2025-09-14 21:06:00,866 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:06:00,866 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 21:06:00,867 - __main__ - INFO - [OK] Relatório gerado: outputs\reports\relatorio_ecomap_20250914_210600.md
+2025-09-14 21:06:00,868 - __main__ - INFO - === RELATÓRIO CONCLUÍDO ===
+2025-09-14 21:06:06,863 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:06:06,864 - __main__ - INFO - === EXECUTANDO PIPELINE COMPLETO ===
+2025-09-14 21:06:06,865 - __main__ - INFO - Etapa 1/4: Ingestão de dados
+2025-09-14 21:06:06,865 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 21:06:06,866 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 21:06:06,866 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 21:06:06,866 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 21:06:06,866 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 21:06:06,872 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:06:06,873 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:06:06,873 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,874 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 21:06:06,874 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:06:06,874 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 21:06:06,875 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/4-tabelas_rais-2022.xlsx - RAIS.csv'))
+2025-09-14 21:06:06,875 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:06:06,881 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:06:06,887 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,903 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 21:06:06,904 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:06:06,904 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:06:06,905 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,906 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 21:06:06,906 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:06:06,908 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 21:06:06,908 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: empty data from Path (WindowsPath('Coletas/RAIS/tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv'))
+2025-09-14 21:06:06,910 - src.ingestion - ERROR - Erro ao processar fonte rais: unable to append to a DataFrame of width 2 with a DataFrame of width 28
+2025-09-14 21:06:06,913 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 21:06:06,917 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:06:06,918 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 21:06:06,918 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:06:06,919 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 21:06:06,919 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:06:06,919 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 21:06:06,921 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:06:06,921 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 21:06:06,922 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 21:06:06,922 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['saldo', 'mes', 'uf', 'desligamentos', 'admissoes', 'municipio', 'ano']
+2025-09-14 21:06:06,923 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:06:06,923 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 21:06:06,924 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 21:06:06,924 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 21:06:06,925 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 21:06:06,925 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 21:06:06,928 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,928 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 21:06:06,929 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 21:06:06,930 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 21:06:06,930 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 21:06:06,930 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['pib', 'ano', 'pib_per_capita', 'codigo_municipio']
+2025-09-14 21:06:06,930 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:06:06,930 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 21:06:06,930 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 21:06:06,931 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 21:06:06,932 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 21:06:06,932 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 21:06:06,932 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 21:06:06,932 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 21:06:06,932 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 21:06:06,932 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 21:06:06,932 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 21:06:06,932 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 21:06:06,937 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,950 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 21:06:06,956 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,967 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 21:06:06,972 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:06:06,981 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 21:06:06,984 - src.ingestion - ERROR - Erro ao processar fonte comexstat: unable to append to a DataFrame of width 119 with a DataFrame of width 43
+2025-09-14 21:06:06,988 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 21:06:06,991 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:06:06,995 - src.utils.io_utils - INFO - Carregado: Atividades_Economicas_em_Joinville_2003-2023.csv (13606 linhas)
+2025-09-14 21:06:06,997 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:06:06,999 - src.utils.io_utils - INFO - Carregado: Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv (2644 linhas)
+2025-09-14 21:06:07,000 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:06:07,003 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:06:07,004 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:06:07,008 - src.utils.io_utils - INFO - Carregado: Espaco_de_Atividades_para_Joinville_2023.csv (670 linhas)
+2025-09-14 21:06:07,009 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:06:07,011 - src.utils.io_utils - INFO - Carregado: Ocupacoes_em_Joinville_2003-2023.csv (10358 linhas)
+2025-09-14 21:06:07,013 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:06:07,014 - src.ingestion - INFO - Aplicando limpeza específica para dados DataViva...
+2025-09-14 21:06:07,014 - src.ingestion - INFO - Fonte dataviva: 33454 -> 33454 linhas após filtros (100.0% mantidas)
+2025-09-14 21:06:07,014 - src.utils.validation - INFO - dataviva: Percentual de valores ausentes dentro do aceitável
+2025-09-14 21:06:07,015 - src.ingestion - INFO - Fonte dataviva carregada com sucesso: 33454 linhas
+2025-09-14 21:06:07,015 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 21:06:07,017 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 21:06:07,017 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 21:06:07,018 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 21:06:07,019 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 21:06:07,024 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\dataviva_clean.csv (33454 linhas, formato: csv)
+2025-09-14 21:06:07,024 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\dataviva_clean.csv
+2025-09-14 21:06:07,028 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 21:06:07,031 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 21:06:07,031 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 21:06:07,032 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:06:07,034 - __main__ - INFO - [OK] caged: 50 registros salvos (Polars)
+2025-09-14 21:06:07,034 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:06:07,036 - __main__ - INFO - [OK] pib: 6 registros salvos (Polars)
+2025-09-14 21:06:07,036 - __main__ - INFO - Tipo de DataFrame para dataviva: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:06:07,042 - __main__ - INFO - [OK] dataviva: 33454 registros salvos (Polars)
+2025-09-14 21:06:07,042 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 21:06:07,043 - __main__ - INFO - Etapa 2/4: Cálculo de indicadores
+2025-09-14 21:06:07,043 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 21:06:07,050 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 21:06:07,055 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 21:06:07,078 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 21:06:07,082 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 21:06:07,082 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 21:06:07,083 - src.indicators - INFO - EconomicIndicators inicializado com engine: polars
+2025-09-14 21:06:07,083 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 21:06:07,083 - src.indicators - INFO - Calculando Location Quotient...
+2025-09-14 21:06:07,083 - src.indicators - DEBUG - Colunas disponíveis: ['unnamed_column', 'duplicated_0', 'duplicated_1', 'duplicated_2', 'duplicated_3', 'duplicated_4', 'duplicated_5', 'duplicated_6', 'duplicated_7', 'duplicated_8', 'duplicated_9', 'duplicated_10', 'duplicated_11', 'duplicated_12', 'duplicated_13', 'duplicated_14', 'duplicated_15', 'duplicated_16', 'duplicated_17', 'duplicated_18', 'duplicated_19', 'duplicated_20', 'duplicated_21', 'duplicated_22', 'duplicated_23', 'duplicated_24', 'duplicated_25', 'duplicated_26']
+2025-09-14 21:06:07,083 - src.indicators - WARNING - Colunas necessárias não encontradas para cálculo do LQ
+2025-09-14 21:06:07,083 - src.indicators - INFO - Calculando Vantagem Comparativa Revelada (RCA)...
+2025-09-14 21:06:07,084 - src.indicators - INFO - Calculando Revealed Comparative Advantage...
+2025-09-14 21:06:07,084 - src.indicators - WARNING - Dados de comércio exterior não disponíveis para RCA
+2025-09-14 21:06:07,084 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 21:06:07,084 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman...
+2025-09-14 21:06:07,084 - src.indicators - INFO - [OK] HHI de concentração calculado
+2025-09-14 21:06:07,084 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:06:07,084 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:06:07,084 - src.indicators - INFO - [OK] Crescimento de tabela_5938_produto_interno_bruto_a_precos_correntes_impostos_liquidos_de_subsidios_sobre_produtos_a_precos_correntes_e_valor_adicionado_bruto_a_precos_correntes_total_e_por_atividade_economica_e_respectivas_participacoes_referencia_2010 calculado para pib
+2025-09-14 21:06:07,084 - src.indicators - INFO - Calculando análise de sazonalidade...
+2025-09-14 21:06:07,084 - src.indicators - INFO - [OK] Análise de sazonalidade calculada
+2025-09-14 21:06:07,084 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:06:07,085 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:06:07,085 - src.indicators - INFO - Tabela mestre iniciada com dataviva: 33454 linhas
+2025-09-14 21:06:07,085 - src.indicators - INFO - [OK] Tabela mestre criada
+2025-09-14 21:06:07,085 - src.indicators - INFO - Cálculo de indicadores concluído. 4 resultados gerados.
+2025-09-14 21:06:07,086 - __main__ - INFO - [OK] concentration_index salvo
+2025-09-14 21:06:07,087 - __main__ - INFO - [OK] growth_indicators salvo
+2025-09-14 21:06:07,089 - __main__ - INFO - [OK] seasonality_analysis salvo
+2025-09-14 21:06:07,098 - __main__ - INFO - [OK] master_table salvo
+2025-09-14 21:06:07,099 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 21:06:07,099 - __main__ - INFO - Etapa 3/4: Criação de visualizações
+2025-09-14 21:06:07,100 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 21:06:07,127 - __main__ - INFO - [OK] concentration_index carregado
+2025-09-14 21:06:07,128 - __main__ - INFO - [OK] growth_indicators carregado
+2025-09-14 21:06:07,153 - __main__ - INFO - [OK] master_table carregado
+2025-09-14 21:06:07,156 - __main__ - INFO - [OK] seasonality_analysis carregado
+2025-09-14 21:06:07,157 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 21:06:07,159 - src.visualization - INFO - Visualizador inicializado. Output: outputs\figures
+2025-09-14 21:06:07,160 - src.visualization - INFO - Criando dashboard de indicadores para Joinville
+2025-09-14 21:06:07,283 - src.visualization - INFO - Dashboard salvo: dashboard_joinville.html
+2025-09-14 21:06:07,283 - src.visualization - INFO - [OK] Dashboard principal criado
+2025-09-14 21:06:07,315 - src.visualization - INFO - [OK] Série temporal de crescimento criada: pib
+2025-09-14 21:06:07,347 - src.visualization - INFO - [OK] Série temporal de crescimento criada: emprego
+2025-09-14 21:06:07,380 - src.visualization - INFO - [OK] Série temporal de crescimento criada: exportações
+2025-09-14 21:06:07,381 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_pib
+2025-09-14 21:06:07,381 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_emprego
+2025-09-14 21:06:07,381 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_exportações
+2025-09-14 21:06:07,434 - src.visualization - INFO - [OK] Decomposição sazonal criada: CAGED
+2025-09-14 21:06:07,480 - src.visualization - INFO - [OK] Decomposição sazonal criada: Exportações
+2025-09-14 21:06:07,480 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_caged
+2025-09-14 21:06:07,480 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_exportações
+2025-09-14 21:06:07,518 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:06:07,518 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:06:07,519 - src.visualization - INFO - Criação de visualizações concluída. 7 figuras geradas.
+2025-09-14 21:06:07,519 - __main__ - INFO - [OK] 7 visualizações criadas
+2025-09-14 21:06:07,519 - __main__ - INFO - === VISUALIZAÇÕES CONCLUÍDAS ===
+2025-09-14 21:06:07,520 - __main__ - INFO - Etapa 4/4: Geração de relatório
+2025-09-14 21:06:07,520 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 21:06:07,524 - __main__ - INFO - [OK] Relatório gerado: outputs\reports\relatorio_ecomap_20250914_210607.md
+2025-09-14 21:06:07,524 - __main__ - INFO - === RELATÓRIO CONCLUÍDO ===
+2025-09-14 21:06:07,525 - __main__ - INFO - === PIPELINE CONCLUÍDO COM SUCESSO ===
+2025-09-14 21:06:07,525 - __main__ - INFO - Tempo total: 0.66 segundos
+2025-09-14 21:06:07,525 - __main__ - INFO - Dados processados: 6 fontes
+2025-09-14 21:06:07,525 - __main__ - INFO - Indicadores calculados: 4
+2025-09-14 21:06:07,525 - __main__ - INFO - Visualizações criadas: 7
+2025-09-14 21:06:07,525 - __main__ - INFO - Relatório: outputs\reports\relatorio_ecomap_20250914_210607.md
