@@ -130,6 +130,11 @@ class DataLoader:
     
     def _load_with_polars(self, file_path: Path, encoding: str, separator: str, **kwargs) -> pl.DataFrame:
         """Carrega arquivo usando polars."""
+        # Verificação prévia do tamanho do arquivo
+        if file_path.stat().st_size == 0:
+            logger.warning(f"Arquivo vazio detectado: {file_path}")
+            raise ValueError(f"Arquivo vazio: {file_path}")
+        
         default_params = {
             'encoding': encoding,
             'separator': separator,
@@ -139,16 +144,34 @@ class DataLoader:
         }
         default_params.update(kwargs)
         
-        return pl.read_csv(file_path, **default_params)
+        df = pl.read_csv(file_path, **default_params)
+        
+        # Verificação pós-carregamento
+        if len(df) == 0:
+            logger.warning(f"DataFrame vazio após carregamento: {file_path}")
+            raise ValueError(f"Dados vazios em: {file_path}")
+        
+        return df
     
     def _load_fallback(self, file_path: Path) -> Union[pd.DataFrame, pl.DataFrame]:
         """Carregamento de fallback com parâmetros conservadores."""
         try:
+            # Verificação prévia do tamanho do arquivo
+            if file_path.stat().st_size == 0:
+                logger.warning(f"Arquivo vazio detectado no fallback: {file_path}")
+                raise ValueError(f"Arquivo vazio: {file_path}")
+            
             if self.engine == "polars":
-                return pl.read_csv(file_path, encoding='utf-8', separator=',', ignore_errors=True, truncate_ragged_lines=True)
+                df = pl.read_csv(file_path, encoding='utf-8', separator=',', ignore_errors=True, truncate_ragged_lines=True)
             else:
-                return pd.read_csv(file_path, encoding='utf-8', sep=',', low_memory=False, 
-                                 on_bad_lines='skip')
+                df = pd.read_csv(file_path, encoding='utf-8', sep=',', low_memory=False, on_bad_lines='skip')
+            
+            # Verificação pós-carregamento
+            if len(df) == 0:
+                logger.warning(f"DataFrame vazio no fallback: {file_path}")
+                raise ValueError(f"Dados vazios em: {file_path}")
+            
+            return df
         except Exception as e:
             logger.error(f"Fallback também falhou para {file_path}: {str(e)}")
             raise

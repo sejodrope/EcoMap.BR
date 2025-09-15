@@ -1,4 +1,209 @@
 {
+  "rais": {
+    "source": "rais",
+    "total_rows": 5587,
+    "total_columns": 28,
+    "memory_usage_mb": 1.193511962890625,
+    "column_info": {
+      "unnamed_column": {
+        "dtype": "String",
+        "null_count": 5587,
+        "null_percentage": 100.0,
+        "unique_count": 1,
+        "unique_percentage": 0.017898693395382137
+      },
+      "duplicated_0": {
+        "dtype": "String",
+        "null_count": 12,
+        "null_percentage": 0.21478432074458564,
+        "unique_count": 33,
+        "unique_percentage": 0.5906568820476106
+      },
+      "duplicated_1": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 5573,
+        "unique_percentage": 99.74941829246465
+      },
+      "duplicated_2": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 5300,
+        "unique_percentage": 94.86307499552534
+      },
+      "duplicated_3": {
+        "dtype": "String",
+        "null_count": 14,
+        "null_percentage": 0.2505817075353499,
+        "unique_count": 1177,
+        "unique_percentage": 21.066762126364775
+      },
+      "duplicated_4": {
+        "dtype": "Float64",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 1190,
+        "unique_percentage": 21.299445140504744
+      },
+      "duplicated_5": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 361,
+        "unique_percentage": 6.4614283157329515
+      },
+      "duplicated_6": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 751,
+        "unique_percentage": 13.441918739931985
+      },
+      "duplicated_7": {
+        "dtype": "String",
+        "null_count": 14,
+        "null_percentage": 0.2505817075353499,
+        "unique_count": 1869,
+        "unique_percentage": 33.452657955969215
+      },
+      "duplicated_8": {
+        "dtype": "Float64",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 1922,
+        "unique_percentage": 34.401288705924465
+      },
+      "duplicated_9": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 717,
+        "unique_percentage": 12.833363164488992
+      },
+      "duplicated_10": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 891,
+        "unique_percentage": 15.947735815285485
+      },
+      "duplicated_11": {
+        "dtype": "String",
+        "null_count": 14,
+        "null_percentage": 0.2505817075353499,
+        "unique_count": 958,
+        "unique_percentage": 17.14694827277609
+      },
+      "duplicated_12": {
+        "dtype": "Float64",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 969,
+        "unique_percentage": 17.34383390012529
+      },
+      "duplicated_13": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 584,
+        "unique_percentage": 10.452836942903168
+      },
+      "duplicated_14": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 1480,
+        "unique_percentage": 26.490066225165563
+      },
+      "duplicated_15": {
+        "dtype": "String",
+        "null_count": 14,
+        "null_percentage": 0.2505817075353499,
+        "unique_count": 1816,
+        "unique_percentage": 32.504027206013966
+      },
+      "duplicated_16": {
+        "dtype": "Float64",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 1863,
+        "unique_percentage": 33.34526579559692
+      },
+      "duplicated_17": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 575,
+        "unique_percentage": 10.291748702344728
+      },
+      "duplicated_18": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 667,
+        "unique_percentage": 11.938428494719885
+      },
+      "duplicated_19": {
+        "dtype": "String",
+        "null_count": 14,
+        "null_percentage": 0.2505817075353499,
+        "unique_count": 1877,
+        "unique_percentage": 33.59584750313227
+      },
+      "duplicated_20": {
+        "dtype": "Float64",
+        "null_count": 17,
+        "null_percentage": 0.30427778772149633,
+        "unique_count": 1909,
+        "unique_percentage": 34.1686056917845
+      },
+      "duplicated_21": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 843,
+        "unique_percentage": 15.08859853230714
+      },
+      "duplicated_22": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 892,
+        "unique_percentage": 15.965634508680868
+      },
+      "duplicated_23": {
+        "dtype": "String",
+        "null_count": 14,
+        "null_percentage": 0.2505817075353499,
+        "unique_count": 3053,
+        "unique_percentage": 54.64471093610166
+      },
+      "duplicated_24": {
+        "dtype": "Float64",
+        "null_count": 19,
+        "null_percentage": 0.3400751745122606,
+        "unique_count": 3075,
+        "unique_percentage": 55.038482190800075
+      },
+      "duplicated_25": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 1184,
+        "unique_percentage": 21.192052980132452
+      },
+      "duplicated_26": {
+        "dtype": "String",
+        "null_count": 15,
+        "null_percentage": 0.26848040093073205,
+        "unique_count": 742,
+        "unique_percentage": 13.280830499373547
+      }
+    },
+    "quality_score": 74.30923828274821
+  },
   "caged": {
     "source": "caged",
     "total_rows": 50,
@@ -171,20 +376,36 @@
     },
     "quality_score": 40.66666666666667
   },
+  "comexstat": {
+    "source": "comexstat",
+    "total_rows": 18707,
+    "total_columns": 1,
+    "memory_usage_mb": 0.14272308349609375,
+    "column_info": {
+      "valor": {
+        "dtype": "Int64",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2136,
+        "unique_percentage": 11.418185705885497
+      }
+    },
+    "quality_score": 73.42545571176565
+  },
   "dataviva": {
     "source": "dataviva",
     "total_rows": 33454,
     "total_columns": 2,
     "memory_usage_mb": 0.510467529296875,
     "column_info": {
-      "data_text_csv_charset_utf_8": {
+      "unnamed_column": {
         "dtype": "String",
         "null_count": 0,
         "null_percentage": 0.0,
         "unique_count": 296,
         "unique_percentage": 0.884797034734262
       },
-      "unnamed_column": {
+      "data_text_csv_charset_utf_8": {
         "dtype": "String",
         "null_count": 0,
         "null_percentage": 0.0,

@@ -95,7 +95,7 @@ class EconomicVisualizer:
             
             # Gráfico 4: Série temporal simulada
             import numpy as np
-            dates = pd.date_range('2020-01-01', '2023-12-31', freq='M')
+            dates = pd.date_range('2020-01-01', '2023-12-31', freq='ME')
             valores = 100 + np.cumsum(np.random.normal(0.5, 2, len(dates)))
             
             fig.add_trace(
@@ -170,7 +170,7 @@ class EconomicVisualizer:
         
         try:
             # Série temporal simulada de crescimento
-            dates = pd.date_range('2020-01-01', '2023-12-31', freq='M')
+            dates = pd.date_range('2020-01-01', '2023-12-31', freq='ME')
             
             for indicator in ['PIB', 'Emprego', 'Exportações']:
                 values = 100 + np.cumsum(np.random.normal(0.3, 1.5, len(dates)))
@@ -216,7 +216,7 @@ class EconomicVisualizer:
         
         try:
             # Simulação de dados sazonais
-            dates = pd.date_range('2020-01-01', '2023-12-31', freq='M')
+            dates = pd.date_range('2020-01-01', '2023-12-31', freq='ME')
             trend = np.linspace(100, 120, len(dates))
             seasonal = 10 * np.sin(2 * np.pi * np.arange(len(dates)) / 12)
             noise = np.random.normal(0, 2, len(dates))

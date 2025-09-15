@@ -33,6 +33,7 @@ class EcoMapIngester:
         engine = self.config['performance']['preferred_engine']
         chunk_size = self.config['performance'].get('chunk_size')
         
+        self.engine = engine  # Armazena engine como atributo da instância
         self.loader = DataLoader(engine=engine, chunk_size=chunk_size)
         self.cleaner = DataCleaner(engine=engine)
         self.validator = DataValidator(engine=engine)
@@ -120,9 +121,9 @@ class EcoMapIngester:
             logger.warning(f"Diretório da fonte {source_name} não encontrado: {source_path}")
             return None
         
-        # Carrega arquivos da fonte
+        # Carrega arquivos da fonte com harmonização de esquemas
         pattern = source_config.get('pattern', '*.csv')
-        dataframes = self.loader.load_directory(source_path, pattern=pattern, combine=True)
+        dataframes = self.loader.load_directory(source_path, pattern=pattern, combine=False)  # Não combina imediatamente
         
         if isinstance(dataframes, dict) and not dataframes:
             logger.warning(f"Nenhum arquivo encontrado para fonte {source_name}")
@@ -130,10 +131,13 @@ class EcoMapIngester:
         
         # Se retornou dicionário vazio ou DataFrame vazio
         if isinstance(dataframes, dict):
-            logger.warning(f"Nenhum DataFrame retornado para fonte {source_name}")
-            return None
-        
-        df = dataframes
+            # Harmonizar esquemas antes de combinar
+            df = self._harmonize_schemas(dataframes, source_name)
+            if df is None:
+                logger.warning(f"Falha na harmonização de esquemas para fonte {source_name}")
+                return None
+        else:
+            df = dataframes
         
         # Aplica padronização de colunas
         df = standardize_column_names(df)
@@ -149,6 +153,180 @@ class EcoMapIngester:
         
         return df
     
+    def _harmonize_schemas(self, dataframes_dict: Dict[str, Union[pd.DataFrame, pl.DataFrame]], 
+                          source_name: str) -> Union[pd.DataFrame, pl.DataFrame, None]:
+        """
+        Harmoniza esquemas de diferentes arquivos da mesma fonte.
+        
+        Args:
+            dataframes_dict: Dicionário de DataFrames por arquivo
+            source_name: Nome da fonte de dados
+            
+        Returns:
+            DataFrame harmonizado ou None se falhar
+        """
+        try:
+            if not dataframes_dict:
+                return None
+            
+            logger.info(f"Harmonizando esquemas para fonte {source_name}: {len(dataframes_dict)} arquivos")
+            
+            # Filtrar DataFrames válidos (não vazios)
+            valid_dfs = {name: df for name, df in dataframes_dict.items() 
+                        if df is not None and len(df) > 0}
+            
+            if not valid_dfs:
+                logger.warning(f"Nenhum DataFrame válido para fonte {source_name}")
+                return None
+            
+            if len(valid_dfs) == 1:
+                # Apenas um DataFrame válido
+                return list(valid_dfs.values())[0]
+            
+            # Estratégias de harmonização por fonte
+            if source_name == 'rais':
+                return self._harmonize_rais_schemas(valid_dfs)
+            elif source_name == 'comexstat':
+                return self._harmonize_comexstat_schemas(valid_dfs)
+            else:
+                # Harmonização genérica
+                return self._harmonize_generic_schemas(valid_dfs)
+                
+        except Exception as e:
+            logger.error(f"Erro na harmonização de esquemas para {source_name}: {str(e)}")
+            return None
+    
+    def _harmonize_rais_schemas(self, dataframes_dict: Dict[str, Union[pd.DataFrame, pl.DataFrame]]) -> Union[pd.DataFrame, pl.DataFrame, None]:
+        """Harmonização específica para arquivos RAIS."""
+        try:
+            # Identifica o DataFrame com mais colunas (mais completo)
+            df_sizes = {name: len(df.columns) for name, df in dataframes_dict.items()}
+            main_df_name = max(df_sizes, key=df_sizes.get)
+            main_df = dataframes_dict[main_df_name]
+            
+            logger.info(f"RAIS: Usando {main_df_name} como base ({df_sizes[main_df_name]} colunas)")
+            
+            # Concatena outros DataFrames compatíveis
+            compatible_dfs = [main_df]
+            
+            for name, df in dataframes_dict.items():
+                if name == main_df_name:
+                    continue
+                    
+                # Verifica se tem colunas suficientemente semelhantes
+                common_cols = set(df.columns) & set(main_df.columns)
+                if len(common_cols) >= min(3, len(df.columns)):  # Pelo menos 3 colunas em comum ou todas
+                    # Seleciona apenas colunas comuns
+                    if self.engine == 'polars':
+                        aligned_df = df.select([col for col in common_cols])
+                    else:
+                        aligned_df = df[list(common_cols)]
+                    compatible_dfs.append(aligned_df)
+                    logger.info(f"RAIS: Incluindo {name} com {len(common_cols)} colunas comuns")
+                else:
+                    logger.warning(f"RAIS: Pulando {name} - poucas colunas em comum ({len(common_cols)})")
+            
+            # Concatena DataFrames compatíveis
+            if len(compatible_dfs) > 1:
+                if self.engine == 'polars':
+                    result = pl.concat(compatible_dfs, how='diagonal')
+                else:
+                    result = pd.concat(compatible_dfs, ignore_index=True, sort=False)
+                logger.info(f"RAIS harmonizado: {len(compatible_dfs)} arquivos, {len(result)} linhas")
+                return result
+            else:
+                return main_df
+                
+        except Exception as e:
+            logger.error(f"Erro na harmonização RAIS: {str(e)}")
+            return None
+    
+    def _harmonize_comexstat_schemas(self, dataframes_dict: Dict[str, Union[pd.DataFrame, pl.DataFrame]]) -> Union[pd.DataFrame, pl.DataFrame, None]:
+        """Harmonização específica para arquivos ComexStat."""
+        try:
+            # Identifica colunas essenciais do comércio exterior
+            essential_cols = ['municipio', 'produto', 'valor', 'ano', 'mes']
+            
+            harmonized_dfs = []
+            
+            for name, df in dataframes_dict.items():
+                # Mapeia colunas essenciais
+                column_mapping = {}
+                df_cols_lower = {col.lower(): col for col in df.columns}
+                
+                for essential in essential_cols:
+                    for col_lower, col_original in df_cols_lower.items():
+                        if essential in col_lower or col_lower.startswith(essential):
+                            column_mapping[col_original] = essential
+                            break
+                
+                if column_mapping:
+                    # Renomeia e seleciona colunas mapeadas
+                    if self.engine == 'polars':
+                        renamed_df = df.rename(column_mapping)
+                        selected_cols = [col for col in essential_cols if col in renamed_df.columns]
+                        if selected_cols:
+                            aligned_df = renamed_df.select(selected_cols)
+                            harmonized_dfs.append(aligned_df)
+                    else:
+                        aligned_df = df.rename(columns=column_mapping)
+                        selected_cols = [col for col in essential_cols if col in aligned_df.columns]
+                        if selected_cols:
+                            aligned_df = aligned_df[selected_cols]
+                            harmonized_dfs.append(aligned_df)
+                    
+                    logger.info(f"ComexStat: Harmonizado {name} com {len(selected_cols)} colunas")
+            
+            if harmonized_dfs:
+                if self.engine == 'polars':
+                    result = pl.concat(harmonized_dfs, how='diagonal')
+                else:
+                    result = pd.concat(harmonized_dfs, ignore_index=True, sort=False)
+                logger.info(f"ComexStat harmonizado: {len(harmonized_dfs)} arquivos, {len(result)} linhas")
+                return result
+            else:
+                # Se não conseguir harmonizar, retorna o maior DataFrame
+                largest_df = max(dataframes_dict.values(), key=len)
+                logger.warning("ComexStat: Usando maior DataFrame sem harmonização")
+                return largest_df
+                
+        except Exception as e:
+            logger.error(f"Erro na harmonização ComexStat: {str(e)}")
+            return None
+    
+    def _harmonize_generic_schemas(self, dataframes_dict: Dict[str, Union[pd.DataFrame, pl.DataFrame]]) -> Union[pd.DataFrame, pl.DataFrame, None]:
+        """Harmonização genérica para outras fontes."""
+        try:
+            # Encontra colunas comuns a todos os DataFrames
+            all_columns = [set(df.columns) for df in dataframes_dict.values()]
+            common_columns = set.intersection(*all_columns) if all_columns else set()
+            
+            if len(common_columns) >= 2:  # Pelo menos 2 colunas comuns
+                compatible_dfs = []
+                for name, df in dataframes_dict.items():
+                    if self.engine == 'polars':
+                        aligned_df = df.select(list(common_columns))
+                    else:
+                        aligned_df = df[list(common_columns)]
+                    compatible_dfs.append(aligned_df)
+                
+                if self.engine == 'polars':
+                    result = pl.concat(compatible_dfs, how='diagonal')
+                else:
+                    result = pd.concat(compatible_dfs, ignore_index=True)
+                
+                logger.info(f"Harmonização genérica: {len(common_columns)} colunas comuns, {len(result)} linhas")
+                return result
+            else:
+                # Retorna o maior DataFrame
+                largest_df = max(dataframes_dict.values(), key=len)
+                logger.warning("Harmonização genérica: Usando maior DataFrame sem harmonização")
+                return largest_df
+                
+        except Exception as e:
+            logger.error(f"Erro na harmonização genérica: {str(e)}")
+            return None
+
     def _apply_source_specific_cleaning(self, 
                                       df: Union[pd.DataFrame, pl.DataFrame], 
                                       source_name: str) -> Union[pd.DataFrame, pl.DataFrame]:

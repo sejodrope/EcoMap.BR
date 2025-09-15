@@ -1173,3 +1173,636 @@ Consider setting 'truncate_ragged_lines=True'.
 2025-09-14 21:06:07,525 - __main__ - INFO - Indicadores calculados: 4
 2025-09-14 21:06:07,525 - __main__ - INFO - Visualizações criadas: 7
 2025-09-14 21:06:07,525 - __main__ - INFO - Relatório: outputs\reports\relatorio_ecomap_20250914_210607.md
+2025-09-14 21:14:12,752 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:14:12,753 - __main__ - INFO - === EXECUTANDO PIPELINE COMPLETO ===
+2025-09-14 21:14:12,753 - __main__ - INFO - Etapa 1/4: Ingestão de dados
+2025-09-14 21:14:12,754 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 21:14:12,756 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 21:14:12,756 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 21:14:12,756 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 21:14:12,756 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 21:14:12,767 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:14:12,767 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:14:12,767 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,768 - src.utils.io_utils - WARNING - Arquivo vazio detectado: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:12,768 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:12,768 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:14:12,768 - src.utils.io_utils - WARNING - Arquivo vazio detectado no fallback: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:12,769 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:12,769 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:12,769 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:12,778 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:14:12,789 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,812 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 21:14:12,813 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:14:12,814 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:14:12,814 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,815 - src.utils.io_utils - WARNING - Arquivo vazio detectado: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:12,815 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:12,815 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:14:12,815 - src.utils.io_utils - WARNING - Arquivo vazio detectado no fallback: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:12,816 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:12,816 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:12,817 - src.ingestion - INFO - Harmonizando esquemas para fonte rais: 2 arquivos
+2025-09-14 21:14:12,817 - src.ingestion - INFO - RAIS: Usando tabelas-rais-2024-parcial.xlsx - TABELA 4 como base (28 colunas)
+2025-09-14 21:14:12,817 - src.ingestion - WARNING - RAIS: Pulando Emprego_em_Santa_Catarina_por_Municipio_2003-2023 - poucas colunas em comum (1)
+2025-09-14 21:14:12,818 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 21:14:12,818 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 21:14:12,819 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:12,819 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['remuneracao_media', 'municipio', 'cnae', 'vinculo_ativo', 'ano', 'uf']
+2025-09-14 21:14:12,819 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:14:12,819 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 21:14:12,820 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 21:14:12,820 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 21:14:12,822 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:14:12,823 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 21:14:12,824 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:14:12,824 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 21:14:12,826 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:14:12,827 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 21:14:12,828 - src.ingestion - INFO - Harmonizando esquemas para fonte caged: 3 arquivos
+2025-09-14 21:14:12,828 - src.ingestion - ERROR - Erro na harmonização genérica: 'EcoMapIngester' object has no attribute 'engine'
+2025-09-14 21:14:12,828 - src.ingestion - WARNING - Falha na harmonização de esquemas para fonte caged
+2025-09-14 21:14:12,829 - src.ingestion - WARNING - Fonte caged retornou dados vazios
+2025-09-14 21:14:12,829 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 21:14:12,831 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,832 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 21:14:12,833 - src.ingestion - INFO - Harmonizando esquemas para fonte pib: 1 arquivos
+2025-09-14 21:14:12,833 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 21:14:12,834 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 21:14:12,834 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:12,834 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['codigo_municipio', 'ano', 'pib', 'pib_per_capita']
+2025-09-14 21:14:12,835 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:14:12,835 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 21:14:12,836 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 21:14:12,836 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 21:14:12,837 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 21:14:12,837 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 21:14:12,837 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 21:14:12,837 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 21:14:12,838 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 21:14:12,838 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 21:14:12,838 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 21:14:12,838 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 21:14:12,838 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 21:14:12,839 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 21:14:12,839 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 21:14:12,839 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 21:14:12,839 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 21:14:12,839 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 21:14:12,840 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 21:14:12,840 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 21:14:12,840 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 21:14:12,841 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 21:14:12,841 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 21:14:12,850 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,865 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 21:14:12,870 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,882 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 21:14:12,887 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:12,897 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 21:14:12,898 - src.ingestion - INFO - Harmonizando esquemas para fonte comexstat: 3 arquivos
+2025-09-14 21:14:12,898 - src.ingestion - ERROR - Erro na harmonização ComexStat: 'EcoMapIngester' object has no attribute 'engine'
+2025-09-14 21:14:12,898 - src.ingestion - WARNING - Falha na harmonização de esquemas para fonte comexstat
+2025-09-14 21:14:12,902 - src.ingestion - WARNING - Fonte comexstat retornou dados vazios
+2025-09-14 21:14:12,902 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 21:14:12,903 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:12,907 - src.utils.io_utils - INFO - Carregado: Atividades_Economicas_em_Joinville_2003-2023.csv (13606 linhas)
+2025-09-14 21:14:12,907 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:12,913 - src.utils.io_utils - INFO - Carregado: Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv (2644 linhas)
+2025-09-14 21:14:12,914 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:12,919 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:14:12,920 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:12,922 - src.utils.io_utils - INFO - Carregado: Espaco_de_Atividades_para_Joinville_2023.csv (670 linhas)
+2025-09-14 21:14:12,922 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:12,927 - src.utils.io_utils - INFO - Carregado: Ocupacoes_em_Joinville_2003-2023.csv (10358 linhas)
+2025-09-14 21:14:12,929 - src.ingestion - INFO - Harmonizando esquemas para fonte dataviva: 5 arquivos
+2025-09-14 21:14:12,929 - src.ingestion - ERROR - Erro na harmonização genérica: 'EcoMapIngester' object has no attribute 'engine'
+2025-09-14 21:14:12,929 - src.ingestion - WARNING - Falha na harmonização de esquemas para fonte dataviva
+2025-09-14 21:14:12,930 - src.ingestion - WARNING - Fonte dataviva retornou dados vazios
+2025-09-14 21:14:12,931 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 21:14:12,941 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 21:14:12,941 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 21:14:12,945 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 21:14:12,945 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 21:14:12,950 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 21:14:12,959 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 21:14:12,959 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 21:14:12,960 - __main__ - INFO - Tipo de DataFrame para rais: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:12,975 - __main__ - INFO - [OK] rais: 5587 registros salvos (Polars)
+2025-09-14 21:14:12,976 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:12,978 - __main__ - INFO - [OK] pib: 6 registros salvos (Polars)
+2025-09-14 21:14:12,978 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 21:14:12,978 - __main__ - INFO - Etapa 2/4: Cálculo de indicadores
+2025-09-14 21:14:12,978 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 21:14:12,987 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 21:14:12,990 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 21:14:13,017 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 21:14:13,052 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 21:14:13,052 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 21:14:13,053 - src.indicators - INFO - EconomicIndicators inicializado com engine: polars
+2025-09-14 21:14:13,053 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 21:14:13,053 - src.indicators - INFO - Calculando Location Quotient...
+2025-09-14 21:14:13,053 - src.indicators - DEBUG - Colunas disponíveis: ['unnamed_column', 'duplicated_0', 'duplicated_1', 'duplicated_2', 'duplicated_3', 'duplicated_4', 'duplicated_5', 'duplicated_6', 'duplicated_7', 'duplicated_8', 'duplicated_9', 'duplicated_10', 'duplicated_11', 'duplicated_12', 'duplicated_13', 'duplicated_14', 'duplicated_15', 'duplicated_16', 'duplicated_17', 'duplicated_18', 'duplicated_19', 'duplicated_20', 'duplicated_21', 'duplicated_22', 'duplicated_23', 'duplicated_24', 'duplicated_25', 'duplicated_26']
+2025-09-14 21:14:13,053 - src.indicators - WARNING - Colunas necessárias não encontradas para cálculo do LQ
+2025-09-14 21:14:13,054 - src.indicators - INFO - Calculando Vantagem Comparativa Revelada (RCA)...
+2025-09-14 21:14:13,054 - src.indicators - INFO - Calculando Revealed Comparative Advantage...
+2025-09-14 21:14:13,054 - src.indicators - WARNING - Dados de comércio exterior não disponíveis para RCA
+2025-09-14 21:14:13,055 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 21:14:13,055 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman...
+2025-09-14 21:14:13,055 - src.indicators - INFO - [OK] HHI de concentração calculado
+2025-09-14 21:14:13,055 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:14:13,056 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:14:13,056 - src.indicators - INFO - [OK] Crescimento de tabela_5938_produto_interno_bruto_a_precos_correntes_impostos_liquidos_de_subsidios_sobre_produtos_a_precos_correntes_e_valor_adicionado_bruto_a_precos_correntes_total_e_por_atividade_economica_e_respectivas_participacoes_referencia_2010 calculado para pib
+2025-09-14 21:14:13,056 - src.indicators - INFO - Calculando análise de sazonalidade...
+2025-09-14 21:14:13,057 - src.indicators - INFO - [OK] Análise de sazonalidade calculada
+2025-09-14 21:14:13,057 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:14:13,057 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:14:13,058 - src.indicators - INFO - Tabela mestre iniciada com dataviva: 33454 linhas
+2025-09-14 21:14:13,058 - src.indicators - INFO - [OK] Tabela mestre criada
+2025-09-14 21:14:13,059 - src.indicators - INFO - Cálculo de indicadores concluído. 4 resultados gerados.
+2025-09-14 21:14:13,060 - __main__ - INFO - [OK] concentration_index salvo
+2025-09-14 21:14:13,061 - __main__ - INFO - [OK] growth_indicators salvo
+2025-09-14 21:14:13,062 - __main__ - INFO - [OK] seasonality_analysis salvo
+2025-09-14 21:14:13,067 - __main__ - INFO - [OK] master_table salvo
+2025-09-14 21:14:13,068 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 21:14:13,068 - __main__ - INFO - Etapa 3/4: Criação de visualizações
+2025-09-14 21:14:13,068 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 21:14:13,092 - __main__ - INFO - [OK] concentration_index carregado
+2025-09-14 21:14:13,095 - __main__ - INFO - [OK] growth_indicators carregado
+2025-09-14 21:14:13,126 - __main__ - INFO - [OK] master_table carregado
+2025-09-14 21:14:13,128 - __main__ - INFO - [OK] seasonality_analysis carregado
+2025-09-14 21:14:13,129 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 21:14:13,129 - src.visualization - INFO - Visualizador inicializado. Output: outputs\figures
+2025-09-14 21:14:13,130 - src.visualization - INFO - Criando dashboard de indicadores para Joinville
+2025-09-14 21:14:13,252 - src.visualization - INFO - Dashboard salvo: dashboard_joinville.html
+2025-09-14 21:14:13,252 - src.visualization - INFO - [OK] Dashboard principal criado
+2025-09-14 21:14:13,287 - src.visualization - INFO - [OK] Série temporal de crescimento criada: pib
+2025-09-14 21:14:13,321 - src.visualization - INFO - [OK] Série temporal de crescimento criada: emprego
+2025-09-14 21:14:13,358 - src.visualization - INFO - [OK] Série temporal de crescimento criada: exportações
+2025-09-14 21:14:13,359 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_pib
+2025-09-14 21:14:13,360 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_emprego
+2025-09-14 21:14:13,360 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_exportações
+2025-09-14 21:14:13,412 - src.visualization - INFO - [OK] Decomposição sazonal criada: CAGED
+2025-09-14 21:14:13,452 - src.visualization - INFO - [OK] Decomposição sazonal criada: Exportações
+2025-09-14 21:14:13,452 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_caged
+2025-09-14 21:14:13,452 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_exportações
+2025-09-14 21:14:13,487 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:14:13,487 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:14:13,488 - src.visualization - INFO - Criação de visualizações concluída. 7 figuras geradas.
+2025-09-14 21:14:13,488 - __main__ - INFO - [OK] 7 visualizações criadas
+2025-09-14 21:14:13,488 - __main__ - INFO - === VISUALIZAÇÕES CONCLUÍDAS ===
+2025-09-14 21:14:13,488 - __main__ - INFO - Etapa 4/4: Geração de relatório
+2025-09-14 21:14:13,488 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 21:14:13,489 - __main__ - INFO - [OK] Relatório gerado: outputs\reports\relatorio_ecomap_20250914_211413.md
+2025-09-14 21:14:13,489 - __main__ - INFO - === RELATÓRIO CONCLUÍDO ===
+2025-09-14 21:14:13,489 - __main__ - INFO - === PIPELINE CONCLUÍDO COM SUCESSO ===
+2025-09-14 21:14:13,489 - __main__ - INFO - Tempo total: 0.74 segundos
+2025-09-14 21:14:13,490 - __main__ - INFO - Dados processados: 6 fontes
+2025-09-14 21:14:13,490 - __main__ - INFO - Indicadores calculados: 4
+2025-09-14 21:14:13,490 - __main__ - INFO - Visualizações criadas: 7
+2025-09-14 21:14:13,490 - __main__ - INFO - Relatório: outputs\reports\relatorio_ecomap_20250914_211413.md
+2025-09-14 21:14:38,699 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:14:38,700 - __main__ - INFO - === EXECUTANDO PIPELINE COMPLETO ===
+2025-09-14 21:14:38,701 - __main__ - INFO - Etapa 1/4: Ingestão de dados
+2025-09-14 21:14:38,701 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 21:14:38,702 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 21:14:38,702 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 21:14:38,702 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 21:14:38,702 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 21:14:38,709 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:14:38,709 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:14:38,709 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,710 - src.utils.io_utils - WARNING - Arquivo vazio detectado: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:38,710 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:38,710 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:14:38,710 - src.utils.io_utils - WARNING - Arquivo vazio detectado no fallback: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:38,710 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:38,711 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:14:38,712 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:38,719 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:14:38,728 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,741 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 21:14:38,742 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:14:38,742 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:14:38,743 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,743 - src.utils.io_utils - WARNING - Arquivo vazio detectado: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:38,744 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:38,744 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:14:38,745 - src.utils.io_utils - WARNING - Arquivo vazio detectado no fallback: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:38,745 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:38,746 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:14:38,746 - src.ingestion - INFO - Harmonizando esquemas para fonte rais: 2 arquivos
+2025-09-14 21:14:38,747 - src.ingestion - INFO - RAIS: Usando tabelas-rais-2024-parcial.xlsx - TABELA 4 como base (28 colunas)
+2025-09-14 21:14:38,747 - src.ingestion - WARNING - RAIS: Pulando Emprego_em_Santa_Catarina_por_Municipio_2003-2023 - poucas colunas em comum (1)
+2025-09-14 21:14:38,749 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 21:14:38,749 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 21:14:38,749 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:38,749 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['cnae', 'vinculo_ativo', 'uf', 'municipio', 'ano', 'remuneracao_media']
+2025-09-14 21:14:38,750 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:14:38,750 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 21:14:38,750 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 21:14:38,750 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 21:14:38,752 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:14:38,752 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 21:14:38,753 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:14:38,753 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 21:14:38,754 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:14:38,755 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 21:14:38,755 - src.ingestion - INFO - Harmonizando esquemas para fonte caged: 3 arquivos
+2025-09-14 21:14:38,762 - src.ingestion - INFO - Harmonização genérica: 2 colunas comuns, 50 linhas
+2025-09-14 21:14:38,763 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:14:38,763 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 21:14:38,763 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:38,764 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['admissoes', 'uf', 'municipio', 'ano', 'desligamentos', 'saldo', 'mes']
+2025-09-14 21:14:38,764 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:14:38,764 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 21:14:38,765 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 21:14:38,765 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 21:14:38,765 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 21:14:38,765 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 21:14:38,767 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,768 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 21:14:38,768 - src.ingestion - INFO - Harmonizando esquemas para fonte pib: 1 arquivos
+2025-09-14 21:14:38,769 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 21:14:38,769 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 21:14:38,769 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:38,769 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['ano', 'pib_per_capita', 'pib', 'codigo_municipio']
+2025-09-14 21:14:38,769 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:14:38,769 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 21:14:38,769 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 21:14:38,770 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 21:14:38,771 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 21:14:38,772 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 21:14:38,772 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 21:14:38,772 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 21:14:38,772 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 21:14:38,772 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 21:14:38,778 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,791 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 21:14:38,799 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,814 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 21:14:38,820 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:14:38,829 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 21:14:38,830 - src.ingestion - INFO - Harmonizando esquemas para fonte comexstat: 3 arquivos
+2025-09-14 21:14:38,845 - src.ingestion - INFO - ComexStat: Harmonizado H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado com 1 colunas
+2025-09-14 21:14:38,852 - src.ingestion - INFO - ComexStat: Harmonizado H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado com 1 colunas
+2025-09-14 21:14:38,855 - src.ingestion - INFO - ComexStat: Harmonizado H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado com 1 colunas
+2025-09-14 21:14:38,855 - src.ingestion - INFO - ComexStat harmonizado: 3 arquivos, 18707 linhas
+2025-09-14 21:14:38,855 - src.utils.data_cleaning - INFO - Colunas padronizadas: 1 colunas
+2025-09-14 21:14:38,856 - src.ingestion - INFO - Aplicando limpeza específica para dados ComexStat...
+2025-09-14 21:14:38,856 - src.ingestion - INFO - Fonte comexstat: 18707 -> 18707 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:38,856 - src.utils.validation - WARNING - comexstat: Colunas obrigatórias ausentes: ['uf', 'valor_usd', 'municipio', 'hs_code', 'ano', 'via']
+2025-09-14 21:14:38,856 - src.utils.validation - INFO - comexstat: Percentual de valores ausentes dentro do aceitável
+2025-09-14 21:14:38,860 - src.ingestion - INFO - Fonte comexstat carregada com sucesso: 18707 linhas
+2025-09-14 21:14:38,860 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 21:14:38,862 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:38,867 - src.utils.io_utils - INFO - Carregado: Atividades_Economicas_em_Joinville_2003-2023.csv (13606 linhas)
+2025-09-14 21:14:38,868 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:38,872 - src.utils.io_utils - INFO - Carregado: Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv (2644 linhas)
+2025-09-14 21:14:38,873 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:38,878 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:14:38,880 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:38,886 - src.utils.io_utils - INFO - Carregado: Espaco_de_Atividades_para_Joinville_2023.csv (670 linhas)
+2025-09-14 21:14:38,887 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:14:38,891 - src.utils.io_utils - INFO - Carregado: Ocupacoes_em_Joinville_2003-2023.csv (10358 linhas)
+2025-09-14 21:14:38,893 - src.ingestion - INFO - Harmonizando esquemas para fonte dataviva: 5 arquivos
+2025-09-14 21:14:38,899 - src.ingestion - INFO - Harmonização genérica: 2 colunas comuns, 33454 linhas
+2025-09-14 21:14:38,900 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:14:38,900 - src.ingestion - INFO - Aplicando limpeza específica para dados DataViva...
+2025-09-14 21:14:38,901 - src.ingestion - INFO - Fonte dataviva: 33454 -> 33454 linhas após filtros (100.0% mantidas)
+2025-09-14 21:14:38,901 - src.utils.validation - INFO - dataviva: Percentual de valores ausentes dentro do aceitável
+2025-09-14 21:14:38,902 - src.ingestion - INFO - Fonte dataviva carregada com sucesso: 33454 linhas
+2025-09-14 21:14:38,902 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 21:14:38,910 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 21:14:38,911 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 21:14:38,914 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 21:14:38,915 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 21:14:38,917 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 21:14:38,918 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 21:14:38,921 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\comexstat_clean.csv (18707 linhas, formato: csv)
+2025-09-14 21:14:38,922 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\comexstat_clean.csv
+2025-09-14 21:14:38,928 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\dataviva_clean.csv (33454 linhas, formato: csv)
+2025-09-14 21:14:38,929 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\dataviva_clean.csv
+2025-09-14 21:14:38,935 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 21:14:38,952 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 21:14:38,952 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 21:14:38,953 - __main__ - INFO - Tipo de DataFrame para rais: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:38,970 - __main__ - INFO - [OK] rais: 5587 registros salvos (Polars)
+2025-09-14 21:14:38,970 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:38,971 - __main__ - INFO - [OK] caged: 50 registros salvos (Polars)
+2025-09-14 21:14:38,971 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:38,974 - __main__ - INFO - [OK] pib: 6 registros salvos (Polars)
+2025-09-14 21:14:38,974 - __main__ - INFO - Tipo de DataFrame para comexstat: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:38,977 - __main__ - INFO - [OK] comexstat: 18707 registros salvos (Polars)
+2025-09-14 21:14:38,977 - __main__ - INFO - Tipo de DataFrame para dataviva: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:14:38,981 - __main__ - INFO - [OK] dataviva: 33454 registros salvos (Polars)
+2025-09-14 21:14:38,982 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 21:14:38,982 - __main__ - INFO - Etapa 2/4: Cálculo de indicadores
+2025-09-14 21:14:38,982 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 21:14:38,994 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 21:14:39,016 - __main__ - INFO - [OK] comexstat: 18707 registros carregados
+2025-09-14 21:14:39,039 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 21:14:39,061 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 21:14:39,088 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 21:14:39,088 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 21:14:39,088 - src.indicators - INFO - EconomicIndicators inicializado com engine: polars
+2025-09-14 21:14:39,088 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 21:14:39,088 - src.indicators - INFO - Calculando Location Quotient...
+2025-09-14 21:14:39,088 - src.indicators - DEBUG - Colunas disponíveis: ['unnamed_column', 'duplicated_0', 'duplicated_1', 'duplicated_2', 'duplicated_3', 'duplicated_4', 'duplicated_5', 'duplicated_6', 'duplicated_7', 'duplicated_8', 'duplicated_9', 'duplicated_10', 'duplicated_11', 'duplicated_12', 'duplicated_13', 'duplicated_14', 'duplicated_15', 'duplicated_16', 'duplicated_17', 'duplicated_18', 'duplicated_19', 'duplicated_20', 'duplicated_21', 'duplicated_22', 'duplicated_23', 'duplicated_24', 'duplicated_25', 'duplicated_26']
+2025-09-14 21:14:39,089 - src.indicators - WARNING - Colunas necessárias não encontradas para cálculo do LQ
+2025-09-14 21:14:39,089 - src.indicators - INFO - Calculando Vantagem Comparativa Revelada (RCA)...
+2025-09-14 21:14:39,089 - src.indicators - INFO - Calculando Revealed Comparative Advantage...
+2025-09-14 21:14:39,089 - src.indicators - INFO - [OK] Revealed Comparative Advantage calculado
+2025-09-14 21:14:39,089 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 21:14:39,089 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman...
+2025-09-14 21:14:39,089 - src.indicators - INFO - [OK] HHI de concentração calculado
+2025-09-14 21:14:39,089 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:14:39,090 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:14:39,090 - src.indicators - INFO - [OK] Crescimento de valor calculado para comexstat
+2025-09-14 21:14:39,090 - src.indicators - INFO - [OK] Crescimento de tabela_5938_produto_interno_bruto_a_precos_correntes_impostos_liquidos_de_subsidios_sobre_produtos_a_precos_correntes_e_valor_adicionado_bruto_a_precos_correntes_total_e_por_atividade_economica_e_respectivas_participacoes_referencia_2010 calculado para pib
+2025-09-14 21:14:39,090 - src.indicators - INFO - Calculando análise de sazonalidade...
+2025-09-14 21:14:39,090 - src.indicators - INFO - [OK] Análise de sazonalidade calculada
+2025-09-14 21:14:39,090 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:14:39,090 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:14:39,091 - src.indicators - INFO - Tabela mestre iniciada com dataviva: 33454 linhas
+2025-09-14 21:14:39,091 - src.indicators - INFO - [OK] Tabela mestre criada
+2025-09-14 21:14:39,091 - src.indicators - INFO - Cálculo de indicadores concluído. 5 resultados gerados.
+2025-09-14 21:14:39,092 - __main__ - INFO - [OK] revealed_comparative_advantage salvo
+2025-09-14 21:14:39,094 - __main__ - INFO - [OK] concentration_index salvo
+2025-09-14 21:14:39,095 - __main__ - INFO - [OK] growth_indicators salvo
+2025-09-14 21:14:39,095 - __main__ - INFO - [OK] seasonality_analysis salvo
+2025-09-14 21:14:39,102 - __main__ - INFO - [OK] master_table salvo
+2025-09-14 21:14:39,102 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 21:14:39,103 - __main__ - INFO - Etapa 3/4: Criação de visualizações
+2025-09-14 21:14:39,103 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 21:14:39,127 - __main__ - INFO - [OK] concentration_index carregado
+2025-09-14 21:14:39,144 - __main__ - INFO - [OK] growth_indicators carregado
+2025-09-14 21:14:39,163 - __main__ - INFO - [OK] master_table carregado
+2025-09-14 21:14:39,188 - __main__ - INFO - [OK] revealed_comparative_advantage carregado
+2025-09-14 21:14:39,190 - __main__ - INFO - [OK] seasonality_analysis carregado
+2025-09-14 21:14:39,190 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 21:14:39,191 - src.visualization - INFO - Visualizador inicializado. Output: outputs\figures
+2025-09-14 21:14:39,191 - src.visualization - INFO - Criando dashboard de indicadores para Joinville
+2025-09-14 21:14:39,314 - src.visualization - INFO - Dashboard salvo: dashboard_joinville.html
+2025-09-14 21:14:39,314 - src.visualization - INFO - [OK] Dashboard principal criado
+2025-09-14 21:14:39,357 - src.visualization - INFO - [OK] Série temporal de crescimento criada: pib
+2025-09-14 21:14:39,405 - src.visualization - INFO - [OK] Série temporal de crescimento criada: emprego
+2025-09-14 21:14:39,443 - src.visualization - INFO - [OK] Série temporal de crescimento criada: exportações
+2025-09-14 21:14:39,443 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_pib
+2025-09-14 21:14:39,443 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_emprego
+2025-09-14 21:14:39,444 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_exportações
+2025-09-14 21:14:39,496 - src.visualization - INFO - [OK] Decomposição sazonal criada: CAGED
+2025-09-14 21:14:39,535 - src.visualization - INFO - [OK] Decomposição sazonal criada: Exportações
+2025-09-14 21:14:39,535 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_caged
+2025-09-14 21:14:39,536 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_exportações
+2025-09-14 21:14:39,572 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:14:39,572 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:14:39,572 - src.visualization - INFO - Criação de visualizações concluída. 7 figuras geradas.
+2025-09-14 21:14:39,572 - __main__ - INFO - [OK] 7 visualizações criadas
+2025-09-14 21:14:39,572 - __main__ - INFO - === VISUALIZAÇÕES CONCLUÍDAS ===
+2025-09-14 21:14:39,573 - __main__ - INFO - Etapa 4/4: Geração de relatório
+2025-09-14 21:14:39,573 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 21:14:39,575 - __main__ - INFO - [OK] Relatório gerado: outputs\reports\relatorio_ecomap_20250914_211439.md
+2025-09-14 21:14:39,576 - __main__ - INFO - === RELATÓRIO CONCLUÍDO ===
+2025-09-14 21:14:39,576 - __main__ - INFO - === PIPELINE CONCLUÍDO COM SUCESSO ===
+2025-09-14 21:14:39,577 - __main__ - INFO - Tempo total: 0.88 segundos
+2025-09-14 21:14:39,577 - __main__ - INFO - Dados processados: 6 fontes
+2025-09-14 21:14:39,577 - __main__ - INFO - Indicadores calculados: 5
+2025-09-14 21:14:39,578 - __main__ - INFO - Visualizações criadas: 7
+2025-09-14 21:14:39,578 - __main__ - INFO - Relatório: outputs\reports\relatorio_ecomap_20250914_211439.md
+2025-09-14 21:21:49,258 - __main__ - INFO - Configurações carregadas de config/config.yaml
+2025-09-14 21:21:49,259 - __main__ - INFO - === EXECUTANDO PIPELINE COMPLETO ===
+2025-09-14 21:21:49,259 - __main__ - INFO - Etapa 1/4: Ingestão de dados
+2025-09-14 21:21:49,259 - __main__ - INFO - === INICIANDO INGESTÃO DE DADOS ===
+2025-09-14 21:21:49,261 - src.ingestion - INFO - EcoMapIngester inicializado com engine: polars
+2025-09-14 21:21:49,261 - __main__ - INFO - Processando todas as fontes de dados...
+2025-09-14 21:21:49,261 - src.ingestion - INFO - Iniciando ingestão de todas as fontes de dados...
+2025-09-14 21:21:49,261 - src.ingestion - INFO - Processando fonte: rais
+2025-09-14 21:21:49,274 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:21:49,274 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:21:49,274 - src.utils.io_utils - INFO - Arquivo 4-tabelas_rais-2022.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,274 - src.utils.io_utils - WARNING - Arquivo vazio detectado: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:21:49,275 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:21:49,275 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:21:49,275 - src.utils.io_utils - WARNING - Arquivo vazio detectado no fallback: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:21:49,275 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:21:49,275 - src.utils.io_utils - ERROR - Erro ao carregar 4-tabelas_rais-2022.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\4-tabelas_rais-2022.xlsx - RAIS.csv
+2025-09-14 21:21:49,276 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:21:49,311 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:21:49,319 - src.utils.io_utils - INFO - Arquivo tabelas-rais-2024-parcial.xlsx - TABELA 4.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,340 - src.utils.io_utils - INFO - Carregado: tabelas-rais-2024-parcial.xlsx - TABELA 4.csv (5587 linhas)
+2025-09-14 21:21:49,341 - chardet.universaldetector - DEBUG - no data received!
+2025-09-14 21:21:49,341 - chardet.universaldetector - DEBUG - no probers hit minimum threshold
+2025-09-14 21:21:49,341 - src.utils.io_utils - INFO - Arquivo tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,342 - src.utils.io_utils - WARNING - Arquivo vazio detectado: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:21:49,342 - src.utils.io_utils - ERROR - Erro ao carregar Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:21:49,342 - src.utils.io_utils - INFO - Tentando carregamento com parâmetros padrão...
+2025-09-14 21:21:49,342 - src.utils.io_utils - WARNING - Arquivo vazio detectado no fallback: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:21:49,342 - src.utils.io_utils - ERROR - Fallback também falhou para Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:21:49,342 - src.utils.io_utils - ERROR - Erro ao carregar tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv: Arquivo vazio: Coletas\RAIS\tabelas_2022x2023_12-12-2024.xlsx - RAIS.csv
+2025-09-14 21:21:49,343 - src.ingestion - INFO - Harmonizando esquemas para fonte rais: 2 arquivos
+2025-09-14 21:21:49,343 - src.ingestion - INFO - RAIS: Usando tabelas-rais-2024-parcial.xlsx - TABELA 4 como base (28 colunas)
+2025-09-14 21:21:49,343 - src.ingestion - WARNING - RAIS: Pulando Emprego_em_Santa_Catarina_por_Municipio_2003-2023 - poucas colunas em comum (1)
+2025-09-14 21:21:49,358 - src.utils.data_cleaning - INFO - Colunas padronizadas: 28 colunas
+2025-09-14 21:21:49,359 - src.ingestion - INFO - Aplicando limpeza específica para dados RAIS...
+2025-09-14 21:21:49,359 - src.ingestion - INFO - Fonte rais: 5587 -> 5587 linhas após filtros (100.0% mantidas)
+2025-09-14 21:21:49,359 - src.utils.validation - WARNING - rais: Colunas obrigatórias ausentes: ['uf', 'vinculo_ativo', 'cnae', 'remuneracao_media', 'municipio', 'ano']
+2025-09-14 21:21:49,361 - src.utils.validation - WARNING - rais: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:21:49,361 - src.utils.validation - WARNING -   unnamed_column: 100.0% ausentes
+2025-09-14 21:21:49,364 - src.ingestion - INFO - Fonte rais carregada com sucesso: 5587 linhas
+2025-09-14 21:21:49,364 - src.ingestion - INFO - Processando fonte: caged
+2025-09-14 21:21:49,368 - src.utils.io_utils - INFO - Arquivo CAGED - Geral.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:21:49,369 - src.utils.io_utils - INFO - Carregado: CAGED - Geral.xls - CAGED.csv (20 linhas)
+2025-09-14 21:21:49,370 - src.utils.io_utils - INFO - Arquivo CAGED - Janeiro 2018.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:21:49,370 - src.utils.io_utils - INFO - Carregado: CAGED - Janeiro 2018.xls - CAGED.csv (15 linhas)
+2025-09-14 21:21:49,371 - src.utils.io_utils - INFO - Arquivo CAGED SC.xls - CAGED.csv: encoding=ascii, separator=','
+2025-09-14 21:21:49,372 - src.utils.io_utils - INFO - Carregado: CAGED SC.xls - CAGED.csv (15 linhas)
+2025-09-14 21:21:49,373 - src.ingestion - INFO - Harmonizando esquemas para fonte caged: 3 arquivos
+2025-09-14 21:21:49,381 - src.ingestion - INFO - Harmonização genérica: 2 colunas comuns, 50 linhas
+2025-09-14 21:21:49,382 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:21:49,382 - src.ingestion - INFO - Aplicando limpeza específica para dados CAGED...
+2025-09-14 21:21:49,382 - src.ingestion - INFO - Fonte caged: 50 -> 50 linhas após filtros (100.0% mantidas)
+2025-09-14 21:21:49,382 - src.utils.validation - WARNING - caged: Colunas obrigatórias ausentes: ['uf', 'admissoes', 'saldo', 'municipio', 'mes', 'desligamentos', 'ano']
+2025-09-14 21:21:49,382 - src.utils.validation - WARNING - caged: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:21:49,383 - src.utils.validation - WARNING -   unnamed_column: 86.0% ausentes
+2025-09-14 21:21:49,383 - src.utils.validation - WARNING -   duplicated_0: 94.0% ausentes
+2025-09-14 21:21:49,383 - src.ingestion - WARNING - Fonte caged tem apenas 50 linhas (mínimo: 100)
+2025-09-14 21:21:49,384 - src.ingestion - INFO - Fonte caged carregada com sucesso: 50 linhas
+2025-09-14 21:21:49,384 - src.ingestion - INFO - Processando fonte: pib
+2025-09-14 21:21:49,387 - src.utils.io_utils - INFO - Arquivo PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,388 - src.utils.io_utils - INFO - Carregado: PIB e Crescimento Econômico - Tabela 5938.xlsx - Produto Interno B...; Joinville.csv (6 linhas)
+2025-09-14 21:21:49,389 - src.ingestion - INFO - Harmonizando esquemas para fonte pib: 1 arquivos
+2025-09-14 21:21:49,389 - src.utils.data_cleaning - INFO - Colunas padronizadas: 20 colunas
+2025-09-14 21:21:49,390 - src.ingestion - INFO - Aplicando limpeza específica para dados PIB...
+2025-09-14 21:21:49,390 - src.ingestion - INFO - Fonte pib: 6 -> 6 linhas após filtros (100.0% mantidas)
+2025-09-14 21:21:49,390 - src.utils.validation - WARNING - pib: Colunas obrigatórias ausentes: ['pib', 'pib_per_capita', 'codigo_municipio', 'ano']
+2025-09-14 21:21:49,390 - src.utils.validation - WARNING - pib: Colunas com muitos valores ausentes (>10.0%)
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   unnamed_column: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_0: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_1: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_2: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_3: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_4: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_5: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_6: 66.7% ausentes
+2025-09-14 21:21:49,391 - src.utils.validation - WARNING -   duplicated_7: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_8: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_9: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_10: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_11: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_12: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_13: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_14: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_15: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_16: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.utils.validation - WARNING -   duplicated_17: 66.7% ausentes
+2025-09-14 21:21:49,392 - src.ingestion - WARNING - Fonte pib tem apenas 6 linhas (mínimo: 100)
+2025-09-14 21:21:49,393 - src.ingestion - INFO - Fonte pib carregada com sucesso: 6 linhas
+2025-09-14 21:21:49,393 - src.ingestion - INFO - Processando fonte: comexstat
+2025-09-14 21:21:49,401 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,421 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado.csv (1132 linhas)
+2025-09-14 21:21:49,428 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,446 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado.csv (10793 linhas)
+2025-09-14 21:21:49,453 - src.utils.io_utils - INFO - Arquivo H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv: encoding=utf-8, separator=','
+2025-09-14 21:21:49,463 - src.utils.io_utils - INFO - Carregado: H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado.csv (6782 linhas)
+2025-09-14 21:21:49,464 - src.ingestion - INFO - Harmonizando esquemas para fonte comexstat: 3 arquivos
+2025-09-14 21:21:49,477 - src.ingestion - INFO - ComexStat: Harmonizado H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_1997-01_2025-12_DT20250912_SH2.xlsx - Resultado com 1 colunas
+2025-09-14 21:21:49,483 - src.ingestion - INFO - ComexStat: Harmonizado H_EXPORTACAO_E IMPORTACAO_POR MUNICIPIO_2006-01_2025-12_DT20250912_SH4.xlsx - Resultado com 1 colunas
+2025-09-14 21:21:49,487 - src.ingestion - INFO - ComexStat: Harmonizado H_EXPORTACAO_POR_MUNICIPIO_1997-01_2025-12_DT20250912.xlsx - Resultado com 1 colunas
+2025-09-14 21:21:49,488 - src.ingestion - INFO - ComexStat harmonizado: 3 arquivos, 18707 linhas
+2025-09-14 21:21:49,488 - src.utils.data_cleaning - INFO - Colunas padronizadas: 1 colunas
+2025-09-14 21:21:49,489 - src.ingestion - INFO - Aplicando limpeza específica para dados ComexStat...
+2025-09-14 21:21:49,489 - src.ingestion - INFO - Fonte comexstat: 18707 -> 18707 linhas após filtros (100.0% mantidas)
+2025-09-14 21:21:49,489 - src.utils.validation - WARNING - comexstat: Colunas obrigatórias ausentes: ['uf', 'via', 'municipio', 'valor_usd', 'ano', 'hs_code']
+2025-09-14 21:21:49,489 - src.utils.validation - INFO - comexstat: Percentual de valores ausentes dentro do aceitável
+2025-09-14 21:21:49,493 - src.ingestion - INFO - Fonte comexstat carregada com sucesso: 18707 linhas
+2025-09-14 21:21:49,493 - src.ingestion - INFO - Processando fonte: dataviva
+2025-09-14 21:21:49,494 - src.utils.io_utils - INFO - Arquivo Atividades_Economicas_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:21:49,500 - src.utils.io_utils - INFO - Carregado: Atividades_Economicas_em_Joinville_2003-2023.csv (13606 linhas)
+2025-09-14 21:21:49,501 - src.utils.io_utils - INFO - Arquivo Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:21:49,505 - src.utils.io_utils - INFO - Carregado: Censo_Escolar_em_Santa_Catarina_por_Localizacao_2007-2015.csv (2644 linhas)
+2025-09-14 21:21:49,505 - src.utils.io_utils - INFO - Arquivo Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:21:49,508 - src.utils.io_utils - INFO - Carregado: Emprego_em_Santa_Catarina_por_Municipio_2003-2023.csv (6176 linhas)
+2025-09-14 21:21:49,509 - src.utils.io_utils - INFO - Arquivo Espaco_de_Atividades_para_Joinville_2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:21:49,510 - src.utils.io_utils - INFO - Carregado: Espaco_de_Atividades_para_Joinville_2023.csv (670 linhas)
+2025-09-14 21:21:49,511 - src.utils.io_utils - INFO - Arquivo Ocupacoes_em_Joinville_2003-2023.csv: encoding=UTF-8-SIG, separator=','
+2025-09-14 21:21:49,516 - src.utils.io_utils - INFO - Carregado: Ocupacoes_em_Joinville_2003-2023.csv (10358 linhas)
+2025-09-14 21:21:49,516 - src.ingestion - INFO - Harmonizando esquemas para fonte dataviva: 5 arquivos
+2025-09-14 21:21:49,519 - src.ingestion - INFO - Harmonização genérica: 2 colunas comuns, 33454 linhas
+2025-09-14 21:21:49,519 - src.utils.data_cleaning - INFO - Colunas padronizadas: 2 colunas
+2025-09-14 21:21:49,520 - src.ingestion - INFO - Aplicando limpeza específica para dados DataViva...
+2025-09-14 21:21:49,520 - src.ingestion - INFO - Fonte dataviva: 33454 -> 33454 linhas após filtros (100.0% mantidas)
+2025-09-14 21:21:49,520 - src.utils.validation - INFO - dataviva: Percentual de valores ausentes dentro do aceitável
+2025-09-14 21:21:49,520 - src.ingestion - INFO - Fonte dataviva carregada com sucesso: 33454 linhas
+2025-09-14 21:21:49,520 - src.ingestion - INFO - Fonte inpi marcada como indisponível - pulando
+2025-09-14 21:21:49,545 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\rais_clean.csv (5587 linhas, formato: csv)
+2025-09-14 21:21:49,546 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\rais_clean.csv
+2025-09-14 21:21:49,550 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\caged_clean.csv (50 linhas, formato: csv)
+2025-09-14 21:21:49,551 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\caged_clean.csv
+2025-09-14 21:21:49,556 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\pib_clean.csv (6 linhas, formato: csv)
+2025-09-14 21:21:49,557 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\pib_clean.csv
+2025-09-14 21:21:49,560 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\comexstat_clean.csv (18707 linhas, formato: csv)
+2025-09-14 21:21:49,561 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\comexstat_clean.csv
+2025-09-14 21:21:49,574 - src.utils.io_utils - INFO - DataFrame salvo: outputs\clean\dataviva_clean.csv (33454 linhas, formato: csv)
+2025-09-14 21:21:49,574 - src.ingestion - INFO - Dados limpos salvos: outputs\clean\dataviva_clean.csv
+2025-09-14 21:21:49,590 - src.ingestion - INFO - Relatório de validação salvo: outputs\derived\quality_checks.csv
+2025-09-14 21:21:49,605 - src.ingestion - INFO - Relatório de qualidade salvo: outputs\derived\data_quality_report.json
+2025-09-14 21:21:49,605 - src.ingestion - INFO - Ingestão completa!
+2025-09-14 21:21:49,606 - __main__ - INFO - Tipo de DataFrame para rais: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:21:49,641 - __main__ - INFO - [OK] rais: 5587 registros salvos (Polars)
+2025-09-14 21:21:49,641 - __main__ - INFO - Tipo de DataFrame para caged: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:21:49,643 - __main__ - INFO - [OK] caged: 50 registros salvos (Polars)
+2025-09-14 21:21:49,643 - __main__ - INFO - Tipo de DataFrame para pib: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:21:49,649 - __main__ - INFO - [OK] pib: 6 registros salvos (Polars)
+2025-09-14 21:21:49,649 - __main__ - INFO - Tipo de DataFrame para comexstat: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:21:49,654 - __main__ - INFO - [OK] comexstat: 18707 registros salvos (Polars)
+2025-09-14 21:21:49,655 - __main__ - INFO - Tipo de DataFrame para dataviva: <class 'polars.dataframe.frame.DataFrame'>
+2025-09-14 21:21:49,663 - __main__ - INFO - [OK] dataviva: 33454 registros salvos (Polars)
+2025-09-14 21:21:49,664 - __main__ - INFO - === INGESTÃO CONCLUÍDA ===
+2025-09-14 21:21:49,665 - __main__ - INFO - Etapa 2/4: Cálculo de indicadores
+2025-09-14 21:21:49,665 - __main__ - INFO - === CALCULANDO INDICADORES DERIVADOS ===
+2025-09-14 21:21:49,698 - __main__ - INFO - [OK] caged: 50 registros carregados
+2025-09-14 21:21:49,717 - __main__ - INFO - [OK] comexstat: 18707 registros carregados
+2025-09-14 21:21:49,721 - __main__ - INFO - [OK] dataviva: 33454 registros carregados
+2025-09-14 21:21:49,741 - __main__ - INFO - [OK] pib: 6 registros carregados
+2025-09-14 21:21:49,774 - __main__ - INFO - [OK] rais: 5587 registros carregados
+2025-09-14 21:21:49,775 - src.indicators - INFO - Iniciando cálculo de todos os indicadores econômicos...
+2025-09-14 21:21:49,775 - src.indicators - INFO - EconomicIndicators inicializado com engine: polars
+2025-09-14 21:21:49,775 - src.indicators - INFO - Calculando Quociente de Localização (LQ)...
+2025-09-14 21:21:49,776 - src.indicators - INFO - Calculando Location Quotient...
+2025-09-14 21:21:49,776 - src.indicators - DEBUG - Colunas disponíveis: ['unnamed_column', 'duplicated_0', 'duplicated_1', 'duplicated_2', 'duplicated_3', 'duplicated_4', 'duplicated_5', 'duplicated_6', 'duplicated_7', 'duplicated_8', 'duplicated_9', 'duplicated_10', 'duplicated_11', 'duplicated_12', 'duplicated_13', 'duplicated_14', 'duplicated_15', 'duplicated_16', 'duplicated_17', 'duplicated_18', 'duplicated_19', 'duplicated_20', 'duplicated_21', 'duplicated_22', 'duplicated_23', 'duplicated_24', 'duplicated_25', 'duplicated_26']
+2025-09-14 21:21:49,776 - src.indicators - WARNING - Colunas necessárias não encontradas para cálculo do LQ
+2025-09-14 21:21:49,776 - src.indicators - INFO - Calculando Vantagem Comparativa Revelada (RCA)...
+2025-09-14 21:21:49,777 - src.indicators - INFO - Calculando Revealed Comparative Advantage...
+2025-09-14 21:21:49,777 - src.indicators - INFO - [OK] Revealed Comparative Advantage calculado
+2025-09-14 21:21:49,777 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman (HHI)...
+2025-09-14 21:21:49,777 - src.indicators - INFO - Calculando Índice de Concentração Herfindahl-Hirschman...
+2025-09-14 21:21:49,777 - src.indicators - INFO - [OK] HHI de concentração calculado
+2025-09-14 21:21:49,777 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:21:49,777 - src.indicators - INFO - Calculando indicadores de crescimento...
+2025-09-14 21:21:49,778 - src.indicators - INFO - [OK] Crescimento de valor calculado para comexstat
+2025-09-14 21:21:49,779 - src.indicators - INFO - [OK] Crescimento de tabela_5938_produto_interno_bruto_a_precos_correntes_impostos_liquidos_de_subsidios_sobre_produtos_a_precos_correntes_e_valor_adicionado_bruto_a_precos_correntes_total_e_por_atividade_economica_e_respectivas_participacoes_referencia_2010 calculado para pib
+2025-09-14 21:21:49,781 - src.indicators - INFO - Calculando análise de sazonalidade...
+2025-09-14 21:21:49,783 - src.indicators - INFO - [OK] Análise de sazonalidade calculada
+2025-09-14 21:21:49,784 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:21:49,784 - src.indicators - INFO - Criando tabela mestre consolidada...
+2025-09-14 21:21:49,785 - src.indicators - INFO - Tabela mestre iniciada com dataviva: 33454 linhas
+2025-09-14 21:21:49,787 - src.indicators - INFO - [OK] Tabela mestre criada
+2025-09-14 21:21:49,787 - src.indicators - INFO - Cálculo de indicadores concluído. 5 resultados gerados.
+2025-09-14 21:21:49,790 - __main__ - INFO - [OK] revealed_comparative_advantage salvo
+2025-09-14 21:21:49,792 - __main__ - INFO - [OK] concentration_index salvo
+2025-09-14 21:21:49,796 - __main__ - INFO - [OK] growth_indicators salvo
+2025-09-14 21:21:49,801 - __main__ - INFO - [OK] seasonality_analysis salvo
+2025-09-14 21:21:49,814 - __main__ - INFO - [OK] master_table salvo
+2025-09-14 21:21:49,815 - __main__ - INFO - === CÁLCULO DE INDICADORES CONCLUÍDO ===
+2025-09-14 21:21:49,815 - __main__ - INFO - Etapa 3/4: Criação de visualizações
+2025-09-14 21:21:49,816 - __main__ - INFO - === CRIANDO VISUALIZAÇÕES ===
+2025-09-14 21:21:49,841 - __main__ - INFO - [OK] concentration_index carregado
+2025-09-14 21:21:49,844 - __main__ - INFO - [OK] growth_indicators carregado
+2025-09-14 21:21:49,873 - __main__ - INFO - [OK] master_table carregado
+2025-09-14 21:21:49,904 - __main__ - INFO - [OK] revealed_comparative_advantage carregado
+2025-09-14 21:21:49,908 - __main__ - INFO - [OK] seasonality_analysis carregado
+2025-09-14 21:21:49,909 - src.visualization - INFO - Iniciando criação de todas as visualizações...
+2025-09-14 21:21:49,910 - src.visualization - INFO - Visualizador inicializado. Output: outputs\figures
+2025-09-14 21:21:49,911 - src.visualization - INFO - Criando dashboard de indicadores para Joinville
+2025-09-14 21:21:50,081 - src.visualization - INFO - Dashboard salvo: dashboard_joinville.html
+2025-09-14 21:21:50,082 - src.visualization - INFO - [OK] Dashboard principal criado
+2025-09-14 21:21:50,116 - src.visualization - INFO - [OK] Série temporal de crescimento criada: pib
+2025-09-14 21:21:50,149 - src.visualization - INFO - [OK] Série temporal de crescimento criada: emprego
+2025-09-14 21:21:50,184 - src.visualization - INFO - [OK] Série temporal de crescimento criada: exportações
+2025-09-14 21:21:50,184 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_pib
+2025-09-14 21:21:50,184 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_emprego
+2025-09-14 21:21:50,185 - src.visualization - INFO - [OK] Série temporal de crescimento criada: timeseries_exportações
+2025-09-14 21:21:50,247 - src.visualization - INFO - [OK] Decomposição sazonal criada: CAGED
+2025-09-14 21:21:50,290 - src.visualization - INFO - [OK] Decomposição sazonal criada: Exportações
+2025-09-14 21:21:50,291 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_caged
+2025-09-14 21:21:50,291 - src.visualization - INFO - [OK] Decomposição sazonal criada: seasonal_exportações
+2025-09-14 21:21:50,332 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:21:50,332 - src.visualization - INFO - [OK] Matriz de correlação criada
+2025-09-14 21:21:50,333 - src.visualization - INFO - Criação de visualizações concluída. 7 figuras geradas.
+2025-09-14 21:21:50,333 - __main__ - INFO - [OK] 7 visualizações criadas
+2025-09-14 21:21:50,333 - __main__ - INFO - === VISUALIZAÇÕES CONCLUÍDAS ===
+2025-09-14 21:21:50,333 - __main__ - INFO - Etapa 4/4: Geração de relatório
+2025-09-14 21:21:50,334 - __main__ - INFO - === GERANDO RELATÓRIO AUTOMATIZADO ===
+2025-09-14 21:21:50,335 - __main__ - INFO - [OK] Relatório gerado: outputs\reports\relatorio_ecomap_20250914_212150.md
+2025-09-14 21:21:50,335 - __main__ - INFO - === RELATÓRIO CONCLUÍDO ===
+2025-09-14 21:21:50,335 - __main__ - INFO - === PIPELINE CONCLUÍDO COM SUCESSO ===
+2025-09-14 21:21:50,336 - __main__ - INFO - Tempo total: 1.08 segundos
+2025-09-14 21:21:50,336 - __main__ - INFO - Dados processados: 6 fontes
+2025-09-14 21:21:50,336 - __main__ - INFO - Indicadores calculados: 5
+2025-09-14 21:21:50,336 - __main__ - INFO - Visualizações criadas: 7
+2025-09-14 21:21:50,337 - __main__ - INFO - Relatório: outputs\reports\relatorio_ecomap_20250914_212150.md
